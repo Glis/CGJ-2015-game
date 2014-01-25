@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: HUDGUISkin
   m_EditorClassIdentifier: 
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: b9ebebbe91ecb7e449af93f24442896d, type: 3}
   m_box:
     m_Name: box
     m_Normal:
-      m_Background: {fileID: 11001, guid: 0000000000000000e000000000000000, type: 0}
+      m_Background: {fileID: 2800000, guid: 98fa630e7cc8d7f4b91c1bf3c553545a, type: 3}
       m_TextColor: {r: .799999952, g: .799999952, b: .799999952, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 0}
-    m_FontSize: 0
+    m_FontSize: 24
     m_FontStyle: 0
     m_Alignment: 4
     m_WordWrap: 0
