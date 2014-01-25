@@ -45,10 +45,6 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
-  - name: Enemies
-    userID: 2
-    uniqueID: 2802521933
-    locked: 0
   - name: Players
     userID: 3
     uniqueID: 2217492029
@@ -56,4 +52,8 @@ TagManager:
   - name: Cone Layer
     userID: 1
     uniqueID: 2278305501
+    locked: 0
+  - name: Enemies
+    userID: 2
+    uniqueID: 2802521933
     locked: 0
