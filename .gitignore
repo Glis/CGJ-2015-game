@@ -1,8 +1,8 @@
 # Unity .gitignore file.
 .DS_Store
-PS-Game/Library
-PS-Game/obj
-PS-Game/Temp
+project/Library
+project/obj
+project/Temp
 *.csproj
 *.sln
 *.userprefs
