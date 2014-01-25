@@ -9,11 +9,12 @@ public class ConeShadowingHandler : MonoBehaviour {
 	public SpriteRenderer coneRenderer;
 	public BoxCollider2D coneCollider;
 	public KeyCode trigger;
-	public Gamestate gamestate;
+	private Gamestate gamestate;
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player1").transform;
+		gamestate = GameObject.Find("GameSetup").GetComponent<Gamestate>();
 	}
 	
 	// Update is called once per frame
