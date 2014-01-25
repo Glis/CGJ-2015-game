@@ -13,8 +13,8 @@ public class EnemyControl : MonoBehaviour {
 	IEnumerator random_target () {
 		while(true)
 		{
-			Target = new Vector3(Random.Range(-5,5),Random.Range(-5,5),0f);
-			yield return new WaitForSeconds(3f);
+			Target = new Vector3(Random.Range(-20,20),Random.Range(-20,20),0f);
+			yield return new WaitForSeconds(2f);
 		}
 	}
 
