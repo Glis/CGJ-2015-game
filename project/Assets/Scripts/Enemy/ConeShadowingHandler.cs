@@ -8,10 +8,12 @@ public class ConeShadowingHandler : MonoBehaviour {
 	public float Distancia = 5f;
 	public SpriteRenderer coneRenderer;
 	public BoxCollider2D coneCollider;
+	public KeyCode trigger;
+	public Gamestate gamestate;
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+		player = GameObject.FindGameObjectWithTag("Player1").transform;
 	}
 	
 	// Update is called once per frame
@@ -38,9 +40,10 @@ public class ConeShadowingHandler : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject != papito){
-			if (other.gameObject.CompareTag("Enemy")){
-//				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
-//				StartCoroutine("destroyFriend");
+			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(trigger)){
+				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
+				gamestate.player1Runner=true;
+				//				StartCoroutine("destroyFriend");
 			}
 		}
 	}
