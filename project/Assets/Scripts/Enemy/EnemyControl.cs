@@ -14,7 +14,7 @@ public class EnemyControl : MonoBehaviour {
 		while(true)
 		{
 			Target = new Vector3(Random.Range(-20,20),Random.Range(-20,20),0f);
-			yield return new WaitForSeconds(2f);
+			yield return new WaitForSeconds(Random.Range(1,3));
 		}
 	}
 

@@ -200,7 +200,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 6acfb68f7821aad4eaa3d67ec634fc9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4392b0c1602feb4f9bff61f90ac341d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &610893737
 Transform:
@@ -448,6 +448,7 @@ GameObject:
   - 50: {fileID: 2006763786}
   - 114: {fileID: 2006763785}
   - 61: {fileID: 2006763784}
+  - 114: {fileID: 2006763788}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -536,3 +537,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 6acfb68f7821aad4eaa3d67ec634fc9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &2006763788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: c927c492cc2fc0a42bf2c08428a80ca8,
+    type: 2}
+  m_PrefabInternal: {fileID: 127676532}
+  m_GameObject: {fileID: 2006763782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d995ed2f0c3fe4cb46b05c0f84f9f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSetup: {fileID: 0}

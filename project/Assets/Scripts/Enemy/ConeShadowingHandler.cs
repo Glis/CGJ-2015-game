@@ -7,6 +7,7 @@ public class ConeShadowingHandler : MonoBehaviour {
 	private Transform player;
 	public float Distancia = 5f;
 	public SpriteRenderer coneRenderer;
+	public BoxCollider2D coneCollider;
 
 	// Use this for initialization
 	void Start () {
@@ -18,16 +19,20 @@ public class ConeShadowingHandler : MonoBehaviour {
 		Vector3 distancia = transform.position - player.position;
 		float dist = distancia.magnitude;
 		if(dist < Distancia){
-			if(!coneRenderer.enabled)
-				coneRenderer.enabled=true;
+			if(!coneRenderer.enabled){
+				coneRenderer.enabled = true;
+				coneCollider.enabled = true;
+			}
 			float delta = Mathf.Acos(Vector3.Dot(Vector3.up, distancia.normalized));
 		    float side = player.position.x < transform.position.x ? -1 : 1;
 			//print(delta);
 			transform.localScale = new Vector3(1,2/dist,1);
 			transform.rotation = Quaternion.Euler(new Vector3(0,0,delta*side*Mathf.Rad2Deg));
 		}else{
-			if(coneRenderer.enabled)
+			if(coneRenderer.enabled){
 				coneRenderer.enabled = false;
+				coneCollider.enabled = false;
+			}
 		}
 	}
 
