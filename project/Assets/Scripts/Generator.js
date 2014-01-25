@@ -1,27 +1,31 @@
 ﻿#pragma strict
 
-StartCoroutine("Do");
+//StartCoroutine("Do");
 
 var enemy : GameObject;
+var mainCamera : Camera;
+var maxCoals : int = 25;
 
-function Do () {
+function Start(){
 
-	while(true){
-	
-		var randx : int = Random.Range(0,2);
-		var randy : int = Random.Range(0,2);
-		
-		if(randx == 0) randx = -1;
-		else randx = 1; 
-		
-		if(randy == 0) randy = -1;
-		else randy = 1; 
-		
-		var x : int = Random.Range(5*randx,(5+1)*randx);
-		var y : int = Random.Range(5*randy,(5+1)*randy);
+	for(var i =0; i<maxCoals; i++){
+		var x : int = Random.Range(mainCamera.ScreenToWorldPoint(new Vector3(0.0f,1.0f,1.0f)).x+0.1f, mainCamera.ScreenToWorldPoint(new Vector3(Screen.width,1.0f,1.0f)).x-0.1f);
+		var y : int = Random.Range(mainCamera.ScreenToWorldPoint(new Vector3(1.0f,0.0f,1.0f)).y+0.1f, mainCamera.ScreenToWorldPoint(new Vector3(1.0f,Screen.height,1.0f)).y-0.1f);
 		GameObject.Instantiate(enemy,new Vector3 (x,y,0f),Quaternion.identity);
-		
-		yield WaitForSeconds (0.7);		
-	}
-	
+	} 
 }
+
+//function Do () {
+//
+//	while(true){
+//		
+//		for(var i =0; i<maxCoals; i++){
+//			var x : int = Random.Range(mainCamera.ScreenToWorldPoint(new Vector3(0.0f,1.0f,1.0f)).x+0.1f, mainCamera.ScreenToWorldPoint(new Vector3(Screen.width,1.0f,1.0f)).x-0.1f);
+//			var y : int = Random.Range(mainCamera.ScreenToWorldPoint(new Vector3(1.0f,0.0f,1.0f)).y+0.1f, mainCamera.ScreenToWorldPoint(new Vector3(1.0f,Screen.height,1.0f)).y-0.1f);
+//			GameObject.Instantiate(enemy,new Vector3 (x,y,0f),Quaternion.identity);
+//		} 
+//		
+//		yield WaitForSeconds (0.7);		
+//	}
+//	
+//}
