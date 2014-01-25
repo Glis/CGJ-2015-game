@@ -1,12 +1,8 @@
 ﻿#pragma strict
 
-
-
 StartCoroutine("Do");
 
 var enemy : GameObject;
-
-
 
 function Do () {
 
