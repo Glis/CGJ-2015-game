@@ -1,0 +1,9 @@
+# Unity .gitignore file.
+.DS_Store
+CGJ2014Game/Library
+CGJ2014Game/obj
+CGJ2014Game/Temp
+*.csproj
+*.sln
+*.userprefs
+*.unityproj
