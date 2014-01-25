@@ -220,7 +220,7 @@ GameObject:
   - 114: {fileID: 2079915544}
   - 61: {fileID: 2079915543}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

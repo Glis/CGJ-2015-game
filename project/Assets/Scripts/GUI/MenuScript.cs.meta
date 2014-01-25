@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: f2209cc578af9634494b10ea4bda2829
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - GUIMenuPrincipal: {fileID: 11400000, guid: d28559bf27be36a43b65b57eb7983af6, type: 2}
+  - gameImag: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
