@@ -4,7 +4,9 @@ using System.Collections;
 public class ConeShadowingHandler : MonoBehaviour {
 
 	public GameObject papito;
-	public Transform player;
+	private Transform player;
+	public float Distancia = 5f;
+	public SpriteRenderer coneRenderer;
 
 	// Use this for initialization
 	void Start () {
@@ -14,22 +16,41 @@ public class ConeShadowingHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector3 distancia = transform.position - player.position;
-//		int dist = distancia.magnitude;
-//		if(dist < 1){
+		float dist = distancia.magnitude;
+		if(dist < Distancia){
+			if(!coneRenderer.enabled)
+				coneRenderer.enabled=true;
 			float delta = Mathf.Acos(Vector3.Dot(Vector3.up, distancia.normalized));
-		float side = player.position.x < transform.position.x ? -1 : 1;
+		    float side = player.position.x < transform.position.x ? -1 : 1;
 			//print(delta);
+			transform.localScale = new Vector3(1,2/dist,1);
 			transform.rotation = Quaternion.Euler(new Vector3(0,0,delta*side*Mathf.Rad2Deg));
-//		}
+		}else{
+			if(coneRenderer.enabled)
+				coneRenderer.enabled = false;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject != papito){
-//			print("TRIGGER!!!!!");
 			if (other.gameObject.CompareTag("Enemy")){
 //				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
-				GameObject.Destroy(other.gameObject,1);
+//				StartCoroutine("destroyFriend");
 			}
 		}
 	}
+
+	void OnTriggerExit2D(Collider2D other){
+		if(other.gameObject != papito){
+			if (other.gameObject.CompareTag("Enemy")){
+				//				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
+//				StopCoroutine("destroyFriend");
+			}
+		}
+	}
+
+//	IEnumerator destroyFriend(GameObject other){
+//		yield return new WaitForSeconds(1);
+//		GameObject.Destroy(other,1);
+//	}
 }
