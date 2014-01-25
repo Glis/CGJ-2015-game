@@ -136,7 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   papito: {fileID: 100000}
-  coneRenderer: {fileID: 0}
+  Distancia: 5
+  coneRenderer: {fileID: 21200002}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
