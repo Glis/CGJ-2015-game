@@ -9,11 +9,12 @@ public class ConeShadowingHandler : MonoBehaviour {
 	public SpriteRenderer coneRenderer;
 	public BoxCollider2D coneCollider;
 	public KeyCode trigger;
-	public Gamestate gamestate;
+	private Gamestate gamestate;
 
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player1").transform;
+		gamestate = GameObject.Find("GameSetup").GetComponent<Gamestate>();
 	}
 	
 	// Update is called once per frame
@@ -42,13 +43,20 @@ public class ConeShadowingHandler : MonoBehaviour {
 		if(other.gameObject != papito){
 			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(trigger)){
 				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
-				gamestate.player1Runner=true;
-				//				StartCoroutine("destroyFriend");
+
+				gamestate.setPlayerRunner(false);
+				player = GameObject.FindGameObjectWithTag("Player2").transform;
+			}
+			if (other.gameObject.CompareTag("Player1") && Input.GetKeyDown(trigger)){
+				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
+				
+				gamestate.setPlayerRunner(true);
 			}
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other){
+
 		if(other.gameObject != papito){
 			if (other.gameObject.CompareTag("Enemy")){
 				//				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
