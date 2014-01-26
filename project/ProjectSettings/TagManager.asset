@@ -3,8 +3,10 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - 
-  - nine
+  - Enemy
+  - Cone
+  - Player2
+  - Player1
   - first
   - second
   - third
@@ -14,12 +16,8 @@ TagManager:
   - seven
   - eight
   - ten
-  - Player2
   - GameSetup
   - Wall
-  - Player1
-  - Enemy
-  - Cone
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
