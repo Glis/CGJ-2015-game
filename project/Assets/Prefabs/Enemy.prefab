@@ -126,10 +126,7 @@ MonoBehaviour:
   coneRenderer: {fileID: 21200002}
   coneCollider: {fileID: 6100002}
   trigger: 32
-<<<<<<< HEAD
-=======
   maxlength: 1
->>>>>>> adc71b75d7b030a3e2449b353ca09abf48d5c11b
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

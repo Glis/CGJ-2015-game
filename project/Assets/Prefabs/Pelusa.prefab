@@ -31,7 +31,7 @@ GameObject:
   - 212: {fileID: 21200002}
   - 61: {fileID: 6100002}
   - 114: {fileID: 11400004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cone
   m_TagString: Cone
   m_Icon: {fileID: 0}
@@ -142,6 +142,7 @@ MonoBehaviour:
   coneCollider: {fileID: 6100002}
   trigger: 32
   maxlength: 0
+  anim: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -160,9 +161,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_SortingLayerID: 2802521933
+  m_SortingLayerID: 1428245293
   m_Sprite: {fileID: 21300050, guid: 6a7389ba520bc8a43910b5f542b10076, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200002
@@ -183,9 +184,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 3
-  m_SortingLayerID: 2278305501
+  m_SortingLayerID: 3424106519
   m_Sprite: {fileID: 21300000, guid: 8712c423eea52174fafbe2955c72ff60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
