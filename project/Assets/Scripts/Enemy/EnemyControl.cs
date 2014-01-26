@@ -26,6 +26,8 @@ public class EnemyControl : MonoBehaviour {
 
 		Vector3 director = (Target - transform.position).normalized;
 		rigidbody2D.velocity = Speed * director;
+		if (director.y > 0)anim.SetBool ("Back", true);
+		else anim.SetBool ("Back", false);
 //		print(rigidbody2D.velocity.ToString());
 		anim.SetFloat ("Speed", Mathf.Abs(rigidbody2D.velocity.magnitude));
 
