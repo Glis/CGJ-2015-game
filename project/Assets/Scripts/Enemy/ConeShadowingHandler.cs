@@ -84,8 +84,6 @@ public class ConeShadowingHandler : MonoBehaviour {
 				P1.SetBool("BA_Am_to_Black", false);
 				P2.SetBool("BD_Black_to_Am", false);
 			}
-
-
 		}
 	}
 	
