@@ -200,6 +200,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 443282760}
   - 114: {fileID: 443282761}
+  - 114: {fileID: 443282762}
   m_Layer: 0
   m_Name: GameSetup
   m_TagString: Untagged
@@ -243,6 +244,20 @@ MonoBehaviour:
   player2Sprite: {fileID: 21300000, guid: 6acfb68f7821aad4eaa3d67ec634fc9d, type: 3}
   player1: {fileID: 0}
   player2: {fileID: 0}
+--- !u!114 &443282762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 443282759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc459afd685918d49b5e1cc6c9c9e493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Runner: 0
+  player1points: 0
+  player2points: 0
 --- !u!1 &538431168
 GameObject:
   m_ObjectHideFlags: 0
