@@ -23,25 +23,19 @@ public class MenuScript : MonoBehaviour {
 	{
 		GUI.skin = GUIMenuPrincipal;
 
-		float inMarginW = W*0.26f;
-		float inMarginH = H*0.33f;
-
-		float internalW = W-(2*inMarginW);
-		float internalH = H-(inMarginH*1.6f);
-
-		GUI.Box (new Rect(0,0,W,H),"");
-		GUILayout.BeginArea(new Rect(inMarginW,inMarginH, W-(2*inMarginW), H-(inMarginH*1.6f)));
+		GUI.Box (new Rect(0,0,Screen.width,Screen.height),"");
+		GUILayout.BeginArea(new Rect(Screen.width*0.4f, Screen.height*0.18f, 600, Screen.height*0.5f));
 			//GUI.Label(new Rect(internalW/2+62,internalH/2-10,150,70),"Desarrollado Por PaperSloth!");
-			if(GUI.Button(new Rect(internalW/2-60,internalH/2-125,185,70),"PLAY"))
+			if(GUI.Button(new Rect(105,0,120,60),"PLAY"))
 			{
 				AutoFade.LoadLevel("GameScene",1,1,new  Color(0.0f,0.0f,0.0f));
 //			 	Application.LoadLevel("GameScene");
 			}
-			if(GUI.Button (new Rect(internalW/2-60,internalH/2-45,185,70),"CREDITS"))
+			if(GUI.Button (new Rect(0,50,300,60),"CREDITS"))
 			{
 				AutoFade.LoadLevel("Creditos",0.7f,0.7f,new  Color(0.0f,0.0f,0.0f));
 			}
-			if(GUI.Button(new Rect(internalW/2-60,internalH/2+35,185,70),"EXIT"))
+			if(GUI.Button(new Rect(100,100,120,60),"EXIT"))
 			{
 				Application.Quit();
 			}

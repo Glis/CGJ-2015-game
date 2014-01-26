@@ -43,7 +43,7 @@ public class YouWin : MonoBehaviour {
 			}
 			if(GUI.Button (new Rect(0,internalH/2-45,185,70),"Menu", styleTexto))
 			{
-				AutoFade.LoadLevel("MainMenu",0.7f,0.7f,new Color(0.0f,0.0f,0.0f));
+				AutoFade.LoadLevel("Intro_Loop",0.7f,0.7f,new Color(0.0f,0.0f,0.0f));
 			}
 		GUILayout.EndArea();
 	}
