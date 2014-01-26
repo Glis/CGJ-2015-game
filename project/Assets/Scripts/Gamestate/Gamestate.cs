@@ -36,6 +36,10 @@ public class Gamestate : MonoBehaviour {
 		if(player2points>=MAX_LIGHT)
 			player1Wins(false);	
 
+		if(GameObject.FindGameObjectsWithTag("Enemy").Length==0){
+			player1Wins(player1points>player2points);
+		}
+
 //		print ("Player1: " + player1points);
 //		print ("Player2: " + player2points);
 	}

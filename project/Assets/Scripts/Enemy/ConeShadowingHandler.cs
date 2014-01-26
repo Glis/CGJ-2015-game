@@ -73,7 +73,6 @@ public class ConeShadowingHandler : MonoBehaviour {
 				P2.SetBool("BD_Black_to_Am", true);
 				P2.SetBool("BD_Am_to_Black", false);
 				P1.SetBool("BA_Black_to_Am", false);
-
 			}
 
 			if (other.gameObject.CompareTag("Player1") && Input.GetKeyDown(triggerPlayer1)){
@@ -85,8 +84,6 @@ public class ConeShadowingHandler : MonoBehaviour {
 				P1.SetBool("BA_Am_to_Black", false);
 				P2.SetBool("BD_Black_to_Am", false);
 			}
-
-
 		}
 	}
 	
