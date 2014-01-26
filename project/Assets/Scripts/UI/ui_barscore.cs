@@ -142,7 +142,7 @@ public class ui_barscore : MonoBehaviour {
 		//aca se	 coloca la barra	
 	}
 
-	void onGUI()
+	void OnGUI()
 	{
 		GUI.skin = GUIMenuPrincipal;
 		
@@ -152,8 +152,8 @@ public class ui_barscore : MonoBehaviour {
 		float internalW = W-(2*inMarginW);
 		float internalH = H-(inMarginH*1.6f);
 
-		GUI.Box(new Rect(2,2,200,50),"");
+		GUI.Box(new Rect(22,10,34,174),"");
 			
-		GUI.Box(new Rect(internalW-2,internalH-2,200,50),"");
+		GUI.Box(new Rect(internalW*2-32,10,34,174),"");
 	}
 }
