@@ -24,9 +24,7 @@ public class Gamestate : MonoBehaviour {
 			player2points+=Time.deltaTime;
 			player1points-=0.5f*Time.deltaTime;
 		}
-		if (player2points > 0)
-				player2points = 0;
-						
+
 		if (player1points < 0)
 			player1points = 0;
 
