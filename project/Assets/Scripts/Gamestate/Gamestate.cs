@@ -31,9 +31,14 @@ public class Gamestate : MonoBehaviour {
 		if(player2points>=MAX_LIGHT)
 			player1Wins(false);
 
-		if(Input.GetKeyDown(KeyCode.Space)){
+		print (player1Runner);
+		/*if(Input.GetKeyDown(KeyCode.Space)){
 			player1Runner= !player1Runner;
-		}
+		}*/
+	}
+
+	public void togglePlayerRunner(){
+		player1Runner = !player1Runner;
 	}
 
 	void player1Wins(bool player1){

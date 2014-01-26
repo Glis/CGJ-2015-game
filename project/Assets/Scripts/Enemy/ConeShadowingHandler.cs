@@ -42,13 +42,14 @@ public class ConeShadowingHandler : MonoBehaviour {
 		if(other.gameObject != papito){
 			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(trigger)){
 				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
-				gamestate.player1Runner=true;
+				gamestate.togglePlayerRunner();
 				//				StartCoroutine("destroyFriend");
 			}
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other){
+
 		if(other.gameObject != papito){
 			if (other.gameObject.CompareTag("Enemy")){
 				//				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
