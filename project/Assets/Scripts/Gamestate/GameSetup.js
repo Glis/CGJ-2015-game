@@ -7,12 +7,6 @@ var bottom: BoxCollider2D;
 var left: BoxCollider2D;
 var right: BoxCollider2D;
 
-var player1Sprite: Sprite;
-var player2Sprite: Sprite;
-
-var player1: GameObject;
-var player2: GameObject;
-
 function Update () {
 
 	top.size = new Vector2(mainCamera.ScreenToWorldPoint(new Vector3(Screen.width*2f, 0f, 0f)).x, 1f);
