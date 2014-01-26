@@ -43,8 +43,14 @@ public class ConeShadowingHandler : MonoBehaviour {
 		if(other.gameObject != papito){
 			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(trigger)){
 				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
-				gamestate.togglePlayerRunner();
-				//				StartCoroutine("destroyFriend");
+
+				gamestate.setPlayerRunner(false);
+				player = GameObject.FindGameObjectWithTag("Player2").transform;
+			}
+			if (other.gameObject.CompareTag("Player1") && Input.GetKeyDown(trigger)){
+				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
+				
+				gamestate.setPlayerRunner(true);
 			}
 		}
 	}

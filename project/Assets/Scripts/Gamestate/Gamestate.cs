@@ -37,8 +37,8 @@ public class Gamestate : MonoBehaviour {
 		}*/
 	}
 
-	public void togglePlayerRunner(){
-		player1Runner = !player1Runner;
+	public void setPlayerRunner(bool flagPlayer){
+		player1Runner = flagPlayer;
 	}
 
 	void player1Wins(bool player1){
