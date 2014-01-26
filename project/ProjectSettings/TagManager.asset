@@ -7,7 +7,6 @@ TagManager:
   - Cone
   - Player2
   - Player1
-<<<<<<< HEAD
   - first
   - second
   - third
@@ -20,10 +19,9 @@ TagManager:
   - ten
   - 
   - fisrst
-=======
+  - 
   - GameSetup
   - Wall
->>>>>>> d6c338ae73dd43a758358f74b56ac712d799d7d6
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -57,24 +55,4 @@ TagManager:
   User Layer 29: 
   User Layer 30: 
   User Layer 31: 
-  m_SortingLayers:
-  - name: Default
-    userID: 0
-    uniqueID: 0
-    locked: 0
-  - name: Players
-    userID: 3
-    uniqueID: 2217492029
-    locked: 0
-  - name: Cone Layer
-    userID: 1
-    uniqueID: 2278305501
-    locked: 0
-  - name: Enemies
-    userID: 2
-    uniqueID: 2802521933
-    locked: 0
-  - name: Contador
-    userID: 4
-    uniqueID: 2686003485
-    locked: 0
+  m_SortingLayers: []

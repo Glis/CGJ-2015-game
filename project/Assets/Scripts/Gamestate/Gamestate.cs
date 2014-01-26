@@ -43,15 +43,8 @@ public class Gamestate : MonoBehaviour {
 //		print ("Player2: " + player2points);
 	}
 
-<<<<<<< HEAD
-		//print (player1Runner);
-		/*if(Input.GetKeyDown(KeyCode.Space)){
-			player1Runner= !player1Runner;
-		}*/
-=======
 	public void setPlayer1Points(float points){
 		player1points += points;
->>>>>>> adc71b75d7b030a3e2449b353ca09abf48d5c11b
 	}
 
 	public void setPlayer2Points(float points){
