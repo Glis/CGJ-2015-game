@@ -4,12 +4,18 @@ using System.Collections;
 public class ui_barscore : MonoBehaviour {
 
 	private Gamestate estado;
+	public GUISkin GUIMenuPrincipal;
 	public Sprite sprite1;
 	public Sprite sprite2;
 	public Sprite sprite3;
+
+	float W;
+	float H;
 	// Use this for initialization
 	void Start()
 	{
+		W=Screen.width;
+		H=Screen.height;
 		estado = GameObject.Find("GameSetup").GetComponent<Gamestate>();
 	}
 	
@@ -28,8 +34,6 @@ public class ui_barscore : MonoBehaviour {
 		{
 			if(porcentaje1 >= 0 && porcentaje1 < 7)	{SpriteRenderer r1 =	GameObject.Find("first1").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite1;
-				Debug.Log(sprite1);
-				Debug.Log(r1.sprite);
 			}
 			if(porcentaje1 >= 7 && porcentaje1 < 13){SpriteRenderer r1 =	GameObject.Find("first1").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite2;
@@ -68,14 +72,14 @@ public class ui_barscore : MonoBehaviour {
 			if(porcentaje1 >= 75 && porcentaje1 < 80){SpriteRenderer r1 =	GameObject.Find("first4").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite3;}
 		}	
-		if(porcentaje1 < 100) // 80% - 100%
+		if(porcentaje1 <= 100) // 80% - 100%
 		{	
 			//3 condiciones
 			if(porcentaje1 >= 81 && porcentaje1 < 86){SpriteRenderer r1 =	GameObject.Find("first5").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite1;}
 			if(porcentaje1 >= 87 && porcentaje1 < 94){SpriteRenderer r1 =	GameObject.Find("first5").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite2;}
-			if(porcentaje1 >= 95 && porcentaje1 < 100){SpriteRenderer r1 =	GameObject.Find("first5").GetComponent<SpriteRenderer>();
+			if(porcentaje1 >= 100){SpriteRenderer r1 =	GameObject.Find("first5").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite3;}
 		}	
 
@@ -124,17 +128,32 @@ public class ui_barscore : MonoBehaviour {
 			if(porcentaje2 >= 75 && porcentaje2 < 80){SpriteRenderer r1 =	GameObject.Find("first9").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite3;}
 		}	
-		if(porcentaje2 < 100) // 80% - 100%
+		if(porcentaje2 <= 100) // 80% - 100%
 		{	
 			//3 condiciones
 			if(porcentaje2 >= 81 && porcentaje2 < 86){SpriteRenderer r1 =	GameObject.Find("first10").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite1;}
 			if(porcentaje2 >= 87 && porcentaje2 < 94){SpriteRenderer r1 =	GameObject.Find("first10").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite2;}
-			if(porcentaje2 >= 95 && porcentaje2 < 100){SpriteRenderer r1 =	GameObject.Find("first10").GetComponent<SpriteRenderer>();
+			if(porcentaje2 >= 100){SpriteRenderer r1 =	GameObject.Find("first10").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite3;}
 		}
 
 		//aca se	 coloca la barra	
+	}
+
+	void onGUI()
+	{
+		GUI.skin = GUIMenuPrincipal;
+		
+		float inMarginW = W*0.26f;
+		float inMarginH = H*0.33f;
+		
+		float internalW = W-(2*inMarginW);
+		float internalH = H-(inMarginH*1.6f);
+
+		GUI.Box(new Rect(2,2,200,50),"");
+			
+		GUI.Box(new Rect(internalW-2,internalH-2,200,50),"");
 	}
 }
