@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 342035365}
   - 114: {fileID: 342035366}
+  - 114: {fileID: 342035368}
   - 114: {fileID: 342035367}
   m_Layer: 0
   m_Name: GameSetup
@@ -227,6 +228,21 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 342035364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc459afd685918d49b5e1cc6c9c9e493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Runner: 0
+  player1points: 0
+  player2points: 0
+--- !u!114 &342035368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 90981aaecb9dfed40a1af06c0ca63198,
+    type: 2}
+  m_PrefabInternal: {fileID: 1236429727}
   m_GameObject: {fileID: 342035364}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -665,7 +681,7 @@ MonoBehaviour:
   moveDown: 274
   moveLeft: 276
   moveRight: 275
-  speed: 20
+  speed: 10
 --- !u!50 &1237534927
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -813,6 +829,10 @@ Prefab:
       propertyPath: m_TagString
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c927c492cc2fc0a42bf2c08428a80ca8, type: 2}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c927c492cc2fc0a42bf2c08428a80ca8, type: 2}
   m_RootGameObject: {fileID: 1237534924}
@@ -948,7 +968,6 @@ MonoBehaviour:
   coneRenderer: {fileID: 1930269327}
   coneCollider: {fileID: 1930269326}
   trigger: 32
-  gamestate: {fileID: 342035367}
 --- !u!61 &1930269326
 BoxCollider2D:
   m_ObjectHideFlags: 0

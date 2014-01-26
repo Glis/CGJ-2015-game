@@ -13,52 +13,59 @@ public class ConeShadowingHandler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player1").transform;
 		gamestate = GameObject.Find("GameSetup").GetComponent<Gamestate>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (gamestate.player1Runner) {
+			player = GameObject.FindGameObjectWithTag ("Player1").transform;				
+		}else{
+			player = GameObject.FindGameObjectWithTag ("Player2").transform;
+		}
 		Vector3 distancia = transform.position - player.position;
 		float dist = distancia.magnitude;
-		if(dist < Distancia){
-			if(!coneRenderer.enabled){
+		if (dist < Distancia) {
+			if (!coneRenderer.enabled) {
 				coneRenderer.enabled = true;
 				coneCollider.enabled = true;
 			}
-			float delta = Mathf.Acos(Vector3.Dot(Vector3.up, distancia.normalized));
-		    float side = player.position.x < transform.position.x ? -1 : 1;
+			float delta = Mathf.Acos (Vector3.Dot (Vector3.up, distancia.normalized));
+			float side = player.position.x < transform.position.x ? -1 : 1;
 			//print(delta);
-			transform.localScale = new Vector3(1,2/dist,1);
-			transform.rotation = Quaternion.Euler(new Vector3(0,0,delta*side*Mathf.Rad2Deg));
-		}else{
-			if(coneRenderer.enabled){
+			transform.localScale = new Vector3 (1, 2 / dist, 1);
+			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, delta * side * Mathf.Rad2Deg));
+		} else {
+			if (coneRenderer.enabled) {
 				coneRenderer.enabled = false;
 				coneCollider.enabled = false;
 			}
-		}
+		}	
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject != papito){
-			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(trigger)){
-				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
 
+			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(trigger)){
 				gamestate.setPlayerRunner(false);
-				player = GameObject.FindGameObjectWithTag("Player2").transform;
+				GameObject.Destroy(papito);
+				gamestate.setPlayer2Points(5f);
 			}
+
 			if (other.gameObject.CompareTag("Player1") && Input.GetKeyDown(trigger)){
-				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
-				
 				gamestate.setPlayerRunner(true);
+				GameObject.Destroy(papito);
+				gamestate.setPlayer1Points(5f);
 			}
+
+
 		}
 	}
-
+	
 	void OnTriggerExit2D(Collider2D other){
-
 		if(other.gameObject != papito){
 			if (other.gameObject.CompareTag("Enemy")){
+
 				//				print("TAG-TRIGGER!!!!!"+other.name+"-layer"+other.gameObject.layer);
 //				StopCoroutine("destroyFriend");
 			}
