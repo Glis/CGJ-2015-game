@@ -1,4 +1,4 @@
-﻿
+﻿#pragma strict
 
 function Start () {
 	var mov: MovieTexture = renderer.material.mainTexture;
