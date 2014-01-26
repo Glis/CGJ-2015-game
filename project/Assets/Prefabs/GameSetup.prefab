@@ -199,6 +199,10 @@ MonoBehaviour:
   bottom: {fileID: 6100004}
   left: {fileID: 6100006}
   right: {fileID: 6100002}
+  player1Sprite: {fileID: 21300000, guid: b4392b0c1602feb4f9bff61f90ac341d, type: 3}
+  player2Sprite: {fileID: 21300000, guid: 6acfb68f7821aad4eaa3d67ec634fc9d, type: 3}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
