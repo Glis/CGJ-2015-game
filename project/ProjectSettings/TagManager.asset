@@ -7,6 +7,18 @@ TagManager:
   - Cone
   - Player2
   - Player1
+  - first
+  - second
+  - third
+  - forth
+  - five
+  - six
+  - seven
+  - eight
+  - nine
+  - ten
+  - 
+  - fisrst
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -56,4 +68,8 @@ TagManager:
   - name: Enemies
     userID: 2
     uniqueID: 2802521933
+    locked: 0
+  - name: Contador
+    userID: 4
+    uniqueID: 2686003485
     locked: 0

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Gamestate : MonoBehaviour {
 
-	private const int MAX_LIGHT = 100;
+	public const int MAX_LIGHT = 100;
 	public bool player1Runner;
 	public float player1points;
 	public float player2points;
@@ -31,7 +31,7 @@ public class Gamestate : MonoBehaviour {
 		if(player2points>=MAX_LIGHT)
 			player1Wins(false);
 
-		print (player1Runner);
+		//print (player1Runner);
 		/*if(Input.GetKeyDown(KeyCode.Space)){
 			player1Runner= !player1Runner;
 		}*/
