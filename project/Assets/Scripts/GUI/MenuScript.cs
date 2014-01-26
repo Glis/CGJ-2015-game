@@ -39,7 +39,7 @@ public class MenuScript : MonoBehaviour {
 			}
 			if(GUI.Button (new Rect(internalW/2-60,internalH/2-45,185,70),"CREDITS"))
 			{
-				Application.LoadLevel("Creditos");
+			AutoFade.LoadLevel("Creditos",1,1,new Color(1.0f,1.0f,1.0f));
 			}
 			if(GUI.Button(new Rect(internalW/2-60,internalH/2+35,185,70),"EXIT"))
 			{

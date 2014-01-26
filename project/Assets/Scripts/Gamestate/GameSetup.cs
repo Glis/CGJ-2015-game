@@ -66,16 +66,6 @@ public class GameSetup : MonoBehaviour {
 
 	}
 
-	void OnGUI(){
-		
-		GUI.skin = GUIMenuPrincipal;
-	
-		if(state.GameOver){
-			GUI.Label(new Rect(0,0,Screen.width/2,(Screen.height)/2),"HA GANADO EL JUGADOR 1!");
-			if(GUI.Button(new Rect(0,0,Screen.width/2,((Screen.height)*2)/3),"MAIN MENU")){
-				Application.LoadLevel("MainMenu");
-			}
-		}
-	}
+
 }
 

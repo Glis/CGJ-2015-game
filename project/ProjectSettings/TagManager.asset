@@ -19,6 +19,8 @@ TagManager:
   - GameSetup
   - Wall
   - 
+  - nine
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -55,6 +57,10 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: BG
+    userID: 5
+    uniqueID: 3785831733
     locked: 0
   - name: Cones
     userID: 3
