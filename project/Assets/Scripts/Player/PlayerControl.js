@@ -32,5 +32,5 @@ function Update () {
 	}
 	
 	anim.SetFloat ("Speed", Mathf.Abs(rigidbody2D.velocity.magnitude));
-	Debug.Log("Magnitude: " + Mathf.Abs(rigidbody2D.velocity.magnitude));
+//	Debug.Log("Magnitude: " + Mathf.Abs(rigidbody2D.velocity.magnitude));
 }
