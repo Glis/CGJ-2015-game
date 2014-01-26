@@ -13,6 +13,7 @@ public class ConeShadowingHandler : MonoBehaviour {
 	private Gamestate gamestate;
 	public float maxlength;
 	public Animator anim;
+	public Animator P1, P2;
 
 	// Use this for initialization
 	void Start () {
@@ -20,14 +21,20 @@ public class ConeShadowingHandler : MonoBehaviour {
 		maxlength = 1.5f;
 		DistanciaEntreB = 3.0f;
 		anim = papito.GetComponent<Animator>();	
+		P1 = GameObject.FindGameObjectWithTag ("Player1").GetComponent<Animator>();	
+		P2 = GameObject.FindGameObjectWithTag ("Player2").GetComponent<Animator>();	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (gamestate.player1Runner) {
-			player = GameObject.FindGameObjectWithTag ("Player1").transform;				
+			player = GameObject.FindGameObjectWithTag ("Player1").transform;
+			P1 = GameObject.FindGameObjectWithTag ("Player1").GetComponent<Animator>();	
+			P2 = GameObject.FindGameObjectWithTag ("Player2").GetComponent<Animator>();	
 		}else{
 			player = GameObject.FindGameObjectWithTag ("Player2").transform;
+			P1 = GameObject.FindGameObjectWithTag ("Player1").GetComponent<Animator>();	
+			P2 = GameObject.FindGameObjectWithTag ("Player2").GetComponent<Animator>();	
 		}
 		Vector3 distancia = transform.position - player.position;
 		float dist = distancia.magnitude;
@@ -62,12 +69,21 @@ public class ConeShadowingHandler : MonoBehaviour {
 				gamestate.setPlayerRunner(false);
 				GameObject.Destroy(papito);
 				gamestate.setPlayer2Points(5f);
+				P1.SetBool("BA_Am_to_Black", true);
+				P2.SetBool("BD_Black_to_Am", true);
+				P2.SetBool("BD_Am_to_Black", false);
+				P1.SetBool("BA_Black_to_Am", false);
+
 			}
 
 			if (other.gameObject.CompareTag("Player1") && Input.GetKeyDown(triggerPlayer1)){
 				gamestate.setPlayerRunner(true);
 				GameObject.Destroy(papito);
 				gamestate.setPlayer1Points(5f);
+				P2.SetBool("BD_Am_to_Black", true);
+				P1.SetBool("BA_Black_to_Am", true);				
+				P1.SetBool("BA_Am_to_Black", false);
+				P2.SetBool("BD_Black_to_Am", false);
 			}
 
 
