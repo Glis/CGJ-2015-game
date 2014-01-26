@@ -34,15 +34,15 @@ public class MenuScript : MonoBehaviour {
 			//GUI.Label(new Rect(internalW/2+62,internalH/2-10,150,70),"Desarrollado Por PaperSloth!");
 			if(GUI.Button(new Rect(internalW/2-60,internalH/2-125,185,70),"PLAY"))
 			{
-				//Application.LoadLevel("")
+			Application.LoadLevel("GameScene");
 			}
 			if(GUI.Button (new Rect(internalW/2-60,internalH/2-45,185,70),"CREDITS"))
 			{
-
+				//Application.LoadLevel("Credits")
 			}
 			if(GUI.Button(new Rect(internalW/2-60,internalH/2+35,185,70),"EXIT"))
 			{
-				//Application.LoadLevel("")
+				Application.Quit();
 			}
 //			GUI.Button(new Rect(internalW/2+80,internalH/2+60,110,110), gameImage);
 		GUILayout.EndArea();

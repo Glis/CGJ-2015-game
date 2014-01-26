@@ -7,12 +7,11 @@ public class Gamestate : MonoBehaviour {
 	public bool player1Runner;
 	public float player1points;
 	public float player2points;
+	public bool GameOver;
 
 	// Use this for initialization
 	void Start () {
-		player1Runner = true;
-		player1points = 0.0f;
-		player2points = 0.0f;
+		resetGamestate();
 	}
 	
 	// Update is called once per frame
@@ -55,10 +54,17 @@ public class Gamestate : MonoBehaviour {
 	}
 
 	void player1Wins(bool player1){
+		GameOver = true;
 		if(player1){
 			print ("HA GANADO EL JUGADOR 1!");
 		}else{
 			print ("HA GANADO EL JUGADOR 2!");
 		}
+	}
+	void resetGamestate(){
+		GameOver = false;
+		player1Runner = true;
+		player1points = 0.0f;
+		player2points = 0.0f;
 	}
 }
