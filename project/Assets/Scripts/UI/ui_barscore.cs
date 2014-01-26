@@ -28,8 +28,8 @@ public class ui_barscore : MonoBehaviour {
 		int p1 = Gamestate.MAX_LIGHT;
 		float porcentaje1 = Mathf.FloorToInt((puntos1*100f) /(float)p1);
 		float porcentaje2 = Mathf.FloorToInt((puntos2*100f) /(float)p1);
-		Debug.Log(porcentaje1);
-		Debug.Log(porcentaje2);
+		//Debug.Log(porcentaje1);
+		//Debug.Log(porcentaje2);
 		if(porcentaje1 < 20) // 0% - 20%
 		{
 			if(porcentaje1 >= 0 && porcentaje1 < 7)	{SpriteRenderer r1 =	GameObject.Find("first1").GetComponent<SpriteRenderer>();

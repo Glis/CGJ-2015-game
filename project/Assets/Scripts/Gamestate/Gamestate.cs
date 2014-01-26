@@ -56,9 +56,11 @@ public class Gamestate : MonoBehaviour {
 	void player1Wins(bool player1){
 		GameOver = true;
 		if(player1){
-			print ("HA GANADO EL JUGADOR 1!");
+			Application.LoadLevel("Winner");
+			print ("Player 1 entro");
 		}else{
-			print ("HA GANADO EL JUGADOR 2!");
+			Application.LoadLevel("Winner_P2");
+			print ("Player 2 entro");
 		}
 	}
 	void resetGamestate(){

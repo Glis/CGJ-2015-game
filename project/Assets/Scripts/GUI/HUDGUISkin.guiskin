@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: HUDGUISkin
   m_EditorClassIdentifier: 
-  m_Font: {fileID: 12800000, guid: b9ebebbe91ecb7e449af93f24442896d, type: 3}
+  m_Font: {fileID: 12800000, guid: 41d31c0dea2d88d45b0d83f6e2a1d5fd, type: 3}
   m_box:
     m_Name: box
     m_Normal:
