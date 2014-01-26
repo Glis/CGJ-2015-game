@@ -140,7 +140,8 @@ MonoBehaviour:
   DistanciaEntreB: 0
   coneRenderer: {fileID: 21200002}
   coneCollider: {fileID: 6100002}
-  trigger: 32
+  triggerPlayer1: 304
+  triggerPlayer2: 303
   maxlength: 0
   anim: {fileID: 0}
 --- !u!212 &21200000
