@@ -8,7 +8,8 @@ public class ConeShadowingHandler : MonoBehaviour {
 	public float DistanciaEntreB;
 	public SpriteRenderer coneRenderer;
 	public BoxCollider2D coneCollider;
-	public KeyCode trigger;
+	public KeyCode triggerPlayer1;
+	public KeyCode triggerPlayer2;
 	private Gamestate gamestate;
 	public float maxlength;
 	public Animator anim;
@@ -57,15 +58,13 @@ public class ConeShadowingHandler : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject != papito){
 
-			print (other.gameObject.tag);
-
-			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(trigger)){
+			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(triggerPlayer2)){
 				gamestate.setPlayerRunner(false);
 				GameObject.Destroy(papito);
 				gamestate.setPlayer2Points(5f);
 			}
 
-			if (other.gameObject.CompareTag("Player1") && Input.GetKeyDown(trigger)){
+			if (other.gameObject.CompareTag("Player1") && Input.GetKeyDown(triggerPlayer1)){
 				gamestate.setPlayerRunner(true);
 				GameObject.Destroy(papito);
 				gamestate.setPlayer1Points(5f);

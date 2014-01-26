@@ -88,7 +88,7 @@ public class ui_barscore : MonoBehaviour {
 			if(porcentaje2 >= 7 && porcentaje2 < 13){SpriteRenderer r1 =	GameObject.Find("first6").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite2;
 			}
-			if(porcentaje2 >= 14 && porcentaje2 < 20){SpriteRenderer r1 =	GameObject.Find("first16").GetComponent<SpriteRenderer>();
+			if(porcentaje2 >= 14 && porcentaje2 < 20){SpriteRenderer r1 =	GameObject.Find("first6").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite3;
 			}
 		}	
