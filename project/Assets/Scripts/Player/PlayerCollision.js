@@ -5,7 +5,7 @@ var gameSetup : GameSetup;
 function OnCollisionEnter2D(collision : Collision2D){
 	
 	for (var contact : ContactPoint2D in collision.contacts) {
-		if(contact.collider.tag.Equals('Player')){			
+		if(contact.collider.tag.Equals('Player1')){			
 		
 			var player1Rendered=gameSetup.player1.GetComponent(SpriteRenderer) as SpriteRenderer;
 			if(player1Rendered.sprite.Equals(gameSetup.player1Sprite)){

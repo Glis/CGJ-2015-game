@@ -11,7 +11,7 @@ public class ConeShadowingHandler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+		player = GameObject.FindGameObjectWithTag("Player1").transform;
 	}
 	
 	// Update is called once per frame

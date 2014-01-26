@@ -109,6 +109,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: eeb8000828e7ca2428b2b90391680488, type: 2}
+      propertyPath: m_TagString
+      value: Cone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eeb8000828e7ca2428b2b90391680488, type: 2}
   m_RootGameObject: {fileID: 1752759542}
@@ -296,6 +300,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9e0e4c9eecb583349b489dbf707daa28, type: 2}
+      propertyPath: m_TagString
+      value: Player1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e0e4c9eecb583349b489dbf707daa28, type: 2}
   m_RootGameObject: {fileID: 1200033153}
@@ -456,7 +464,7 @@ GameObject:
   - 61: {fileID: 1200033158}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -557,7 +565,7 @@ GameObject:
   - 114: {fileID: 1237534930}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -734,6 +742,10 @@ Prefab:
       propertyPath: gameSetup
       value: 
       objectReference: {fileID: 342035366}
+    - target: {fileID: 100000, guid: c927c492cc2fc0a42bf2c08428a80ca8, type: 2}
+      propertyPath: m_TagString
+      value: Player2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c927c492cc2fc0a42bf2c08428a80ca8, type: 2}
   m_RootGameObject: {fileID: 1237534924}
@@ -899,7 +911,7 @@ GameObject:
   - 114: {fileID: 1930269324}
   m_Layer: 0
   m_Name: Cone
-  m_TagString: Untagged
+  m_TagString: Cone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
