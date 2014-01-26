@@ -23,7 +23,7 @@ public class ui_barscore : MonoBehaviour {
 		float porcentaje1 = Mathf.FloorToInt((puntos1*100f) /(float)p1);
 		float porcentaje2 = Mathf.FloorToInt((puntos2*100f) /(float)p1);
 		Debug.Log(porcentaje1);
-		Debug.Log (porcentaje2);
+		Debug.Log(porcentaje2);
 		if(porcentaje1 < 20) // 0% - 20%
 		{
 			if(porcentaje1 >= 0 && porcentaje1 < 7)	{SpriteRenderer r1 =	GameObject.Find("first1").GetComponent<SpriteRenderer>();
@@ -85,10 +85,10 @@ public class ui_barscore : MonoBehaviour {
 			if(porcentaje2 >= 0 && porcentaje2 < 7){SpriteRenderer r1 =	GameObject.Find("first6").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite1;
 			}
-			if(porcentaje2 >= 7 && porcentaje2 < 13){SpriteRenderer r1 =	GameObject.Find("first6").GetComponent<SpriteRenderer>();
+			if(porcentaje2 >= 7 && porcentaje2 < 13){SpriteRenderer r1 = GameObject.Find("first6").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite2;
 			}
-			if(porcentaje2 >= 14 && porcentaje2 < 20){SpriteRenderer r1 =	GameObject.Find("first16").GetComponent<SpriteRenderer>();
+			if(porcentaje2 >= 14 && porcentaje2 < 20){SpriteRenderer r1 = GameObject.Find("first6").GetComponent<SpriteRenderer>();
 				r1.sprite = sprite3;
 			}
 		}	
