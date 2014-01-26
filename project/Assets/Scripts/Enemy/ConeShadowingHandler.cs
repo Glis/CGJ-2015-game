@@ -5,15 +5,18 @@ public class ConeShadowingHandler : MonoBehaviour {
 
 	public GameObject papito;
 	private Transform player;
-	public float Distancia = 5f;
+	public float DistanciaEntreB;
 	public SpriteRenderer coneRenderer;
 	public BoxCollider2D coneCollider;
 	public KeyCode trigger;
 	private Gamestate gamestate;
+	public float maxlength;
 
 	// Use this for initialization
 	void Start () {
 		gamestate = GameObject.Find("GameSetup").GetComponent<Gamestate>();
+		maxlength = 1.5f;
+		DistanciaEntreB = 3.0f;
 	}
 	
 	// Update is called once per frame
@@ -25,15 +28,20 @@ public class ConeShadowingHandler : MonoBehaviour {
 		}
 		Vector3 distancia = transform.position - player.position;
 		float dist = distancia.magnitude;
-		if (dist < Distancia) {
+		if (dist < DistanciaEntreB) {
 			if (!coneRenderer.enabled) {
 				coneRenderer.enabled = true;
 				coneCollider.enabled = true;
 			}
 			float delta = Mathf.Acos (Vector3.Dot (Vector3.up, distancia.normalized));
 			float side = player.position.x < transform.position.x ? -1 : 1;
-			transform.localScale = new Vector3 (1, 2 / dist, 1);
 			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, delta * side * Mathf.Rad2Deg));
+
+			float shadLength = ( 2f / dist ) > maxlength ? maxlength: ( 2f / dist ); 
+			if (shadLength < 0.2f)
+				shadLength = 0.2f;
+			transform.localScale = new Vector3 (1.0f, shadLength , 1.0f);
+
 		} else {
 			if (coneRenderer.enabled) {
 				coneRenderer.enabled = false;

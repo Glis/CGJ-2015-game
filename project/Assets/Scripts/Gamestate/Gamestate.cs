@@ -39,8 +39,8 @@ public class Gamestate : MonoBehaviour {
 		if(player2points>=MAX_LIGHT)
 			player1Wins(false);	
 
-		print ("Player1: " + player1points);
-		print ("Player2: " + player2points);
+//		print ("Player1: " + player1points);
+//		print ("Player2: " + player2points);
 	}
 
 	public void setPlayer1Points(float points){

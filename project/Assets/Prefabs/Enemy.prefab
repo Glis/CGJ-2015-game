@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.83981109, y: 1.08964467, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -122,10 +122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   papito: {fileID: 100000}
-  Distancia: 5
+  DistanciaEntreB: 0
   coneRenderer: {fileID: 21200002}
   coneCollider: {fileID: 6100002}
   trigger: 32
+  maxlength: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
