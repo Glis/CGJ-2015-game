@@ -14,6 +14,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: Electrified
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -44,6 +50,24 @@ Transition:
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
+--- !u!1101 &110116819
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110221044}
+  m_DstState: {fileID: 110283605}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Electrified
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
 --- !u!1101 &110141417
 Transition:
   m_ObjectHideFlags: 3
@@ -62,6 +86,24 @@ Transition:
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
+--- !u!1101 &110143399
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110283605}
+  m_DstState: {fileID: 110221044}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Electrified
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
 --- !u!1102 &110200000
 State:
   m_ObjectHideFlags: 3
@@ -74,6 +116,21 @@ State:
   - {fileID: 7400000, guid: d9404675049e106448e89237816c8603, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: -132, y: 108, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110221044
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Coal_electrified
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 658cb1d796e733341953f9894a836b8e, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 204, y: 240, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -103,13 +160,19 @@ StateMachine:
   m_States:
   - {fileID: 110200000}
   - {fileID: 110283605}
+  - {fileID: 110221044}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 110221044}
+      second:
+      - {fileID: 110116819}
+    data:
       first: {fileID: 110283605}
       second:
       - {fileID: 110141417}
+      - {fileID: 110143399}
     data:
       first: {fileID: 110200000}
       second:

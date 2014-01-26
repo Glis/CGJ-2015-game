@@ -11,12 +11,14 @@ public class ConeShadowingHandler : MonoBehaviour {
 	public KeyCode trigger;
 	private Gamestate gamestate;
 	public float maxlength;
+	public Animator anim;
 
 	// Use this for initialization
 	void Start () {
 		gamestate = GameObject.Find("GameSetup").GetComponent<Gamestate>();
 		maxlength = 1.5f;
 		DistanciaEntreB = 3.0f;
+		anim = papito.GetComponent<Animator>();	
 	}
 	
 	// Update is called once per frame
@@ -32,6 +34,7 @@ public class ConeShadowingHandler : MonoBehaviour {
 			if (!coneRenderer.enabled) {
 				coneRenderer.enabled = true;
 				coneCollider.enabled = true;
+				anim.SetBool ("Electrified", coneCollider.enabled);
 			}
 			float delta = Mathf.Acos (Vector3.Dot (Vector3.up, distancia.normalized));
 			float side = player.position.x < transform.position.x ? -1 : 1;
@@ -46,6 +49,7 @@ public class ConeShadowingHandler : MonoBehaviour {
 			if (coneRenderer.enabled) {
 				coneRenderer.enabled = false;
 				coneCollider.enabled = false;
+				anim.SetBool ("Electrified", coneCollider.enabled);
 			}
 		}	
 	}
