@@ -8,12 +8,29 @@ public class ui_barscore : MonoBehaviour {
 	public Sprite sprite2;
 	public Sprite sprite3;
 
-	void Start(){
+	private SpriteRenderer r1,r2,r3,r4,r5,r6,r7,r8,r9,r10;
+
+	// Use this for initialization
+	void Start()
+	{
 		estado = GameObject.Find("GameSetup").GetComponent<Gamestate>();
+		r1 = GameObject.Find("first1").GetComponent<SpriteRenderer>();
+		r2 = GameObject.Find("first2").GetComponent<SpriteRenderer>();
+		r3 = GameObject.Find("first3").GetComponent<SpriteRenderer>();
+		r4 = GameObject.Find("first4").GetComponent<SpriteRenderer>();
+		r5 = GameObject.Find("first5").GetComponent<SpriteRenderer>();
+		r6 = GameObject.Find("first6").GetComponent<SpriteRenderer>();
+		r7 = GameObject.Find("first7").GetComponent<SpriteRenderer>();
+		r8 = GameObject.Find("first8").GetComponent<SpriteRenderer>();
+		r9 = GameObject.Find("first9").GetComponent<SpriteRenderer>();
+		r10 = GameObject.Find("first10").GetComponent<SpriteRenderer>();
+
+
 	}
 	
 	// Update is called once per frame
-	void Update (){
+	void Update () 
+	{
 		// 5 estados de 3 intervalos 
 		float puntos1 = estado.player1points; // 100% para jugador 1
 		float puntos2 = estado.player2points;
