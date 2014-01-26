@@ -65,24 +65,29 @@ public class ConeShadowingHandler : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject != papito){
 
-			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(triggerPlayer2)){
-				gamestate.setPlayerRunner(false);
-				GameObject.Destroy(papito);
-				gamestate.setPlayer2Points(5f);
-				P1.SetBool("BA_Am_to_Black", true);
-				P2.SetBool("BD_Black_to_Am", true);
-				P2.SetBool("BD_Am_to_Black", false);
-				P1.SetBool("BA_Black_to_Am", false);
+			if(Input.GetKeyDown(triggerPlayer2)){
+//				shift.Play();
+				if (other.gameObject.CompareTag("Player2")){
+					gamestate.setPlayerRunner(false);
+					GameObject.Destroy(papito);
+					gamestate.setPlayer2Points(5f);
+					P1.SetBool("BA_Am_to_Black", true);
+					P2.SetBool("BD_Black_to_Am", true);
+					P2.SetBool("BD_Am_to_Black", false);
+					P1.SetBool("BA_Black_to_Am", false);
+				}
 			}
-
-			if (other.gameObject.CompareTag("Player1") && Input.GetKeyDown(triggerPlayer1)){
-				gamestate.setPlayerRunner(true);
-				GameObject.Destroy(papito);
-				gamestate.setPlayer1Points(5f);
-				P2.SetBool("BD_Am_to_Black", true);
-				P1.SetBool("BA_Black_to_Am", true);				
-				P1.SetBool("BA_Am_to_Black", false);
-				P2.SetBool("BD_Black_to_Am", false);
+			if(Input.GetKeyDown(triggerPlayer1)){
+//				shift.Play();
+				if (other.gameObject.CompareTag("Player1")){
+					gamestate.setPlayerRunner(true);
+					GameObject.Destroy(papito);
+					gamestate.setPlayer1Points(5f);
+					P2.SetBool("BD_Am_to_Black", true);
+					P1.SetBool("BA_Black_to_Am", true);				
+					P1.SetBool("BA_Am_to_Black", false);
+					P2.SetBool("BD_Black_to_Am", false);
+				}
 			}
 		}
 	}

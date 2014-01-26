@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Gamestate : MonoBehaviour {
@@ -8,6 +8,8 @@ public class Gamestate : MonoBehaviour {
 	public float player1points;
 	public float player2points;
 	public bool GameOver;
+	public bool transformed = false;
+	public AudioSource swoosh;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +18,10 @@ public class Gamestate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(transformed){
+			swoosh.Play();
+			transformed=false;
+		}
 		if(player1Runner){
 			player1points+=Time.deltaTime;
 			player2points-=0.5f*Time.deltaTime;
@@ -55,6 +61,7 @@ public class Gamestate : MonoBehaviour {
 
 	public void setPlayerRunner(bool flagPlayer){
 		player1Runner = flagPlayer;
+		transformed=true;
 	}
 
 	void player1Wins(bool player1){
