@@ -24,18 +24,40 @@ public class Gamestate : MonoBehaviour {
 			player2points+=Time.deltaTime;
 			player1points-=0.5f*Time.deltaTime;
 		}
+		if (player2points > 0)
+				player2points = 0;
+						
+		if (player1points < 0)
+			player1points = 0;
+
+		if (player2points < 0)
+			player2points = 0;
 
 		//Win condition!
 		if(player1points>=MAX_LIGHT)
 			player1Wins(true);
 		if(player2points>=MAX_LIGHT)
-			player1Wins(false);
+			player1Wins(false);	
 
+//		print ("Player1: " + player1points);
+//		print ("Player2: " + player2points);
+	}
+
+<<<<<<< HEAD
 		//print (player1Runner);
 		/*if(Input.GetKeyDown(KeyCode.Space)){
 			player1Runner= !player1Runner;
 		}*/
+=======
+	public void setPlayer1Points(float points){
+		player1points += points;
+>>>>>>> adc71b75d7b030a3e2449b353ca09abf48d5c11b
 	}
+
+	public void setPlayer2Points(float points){
+		player2points += points;
+	}
+
 
 	public void setPlayerRunner(bool flagPlayer){
 		player1Runner = flagPlayer;

@@ -1,11 +1,17 @@
 ﻿#pragma strict
-
 var moveUp: KeyCode;
 var moveDown: KeyCode;
 var moveLeft: KeyCode;
 var moveRight: KeyCode;
 
-var speed : float = 2;
+var speed : float = 2.0f;
+var anim : Animator;
+
+// Use this for initialization
+function Start () {
+	anim = gameObject.GetComponent(Animator) as Animator;
+}
+
 
 function Update () {
 
@@ -24,5 +30,7 @@ function Update () {
 	}else{	
 		rigidbody2D.velocity.x=0;
 	}
-
+	
+	anim.SetFloat ("Speed", Mathf.Abs(rigidbody2D.velocity.magnitude));
+//	Debug.Log("Magnitude: " + Mathf.Abs(rigidbody2D.velocity.magnitude));
 }
