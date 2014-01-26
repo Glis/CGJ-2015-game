@@ -192,14 +192,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78b94426a0cdcc64e8f88d93049c2568, type: 3}
+  m_Script: {fileID: 11500000, guid: dc459afd685918d49b5e1cc6c9c9e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  top: {fileID: 6100000}
-  bottom: {fileID: 6100004}
-  left: {fileID: 6100006}
-  right: {fileID: 6100002}
+  player1Runner: 0
+  player1points: 0
+  player2points: 0
+  GameOver: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,12 +207,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc459afd685918d49b5e1cc6c9c9e493, type: 3}
+  m_Script: {fileID: 11500000, guid: 78b94426a0cdcc64e8f88d93049c2568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Runner: 0
-  player1points: 0
-  player2points: 0
+  mainCamera: {fileID: 0}
+  top: {fileID: 6100000}
+  bottom: {fileID: 6100004}
+  left: {fileID: 6100006}
+  right: {fileID: 6100002}
+  GUIMenuPrincipal: {fileID: 11400000, guid: 2cbefce4f9d8728478b32672f0bf4455, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

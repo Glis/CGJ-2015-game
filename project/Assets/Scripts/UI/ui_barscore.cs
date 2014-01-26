@@ -4,18 +4,13 @@ using System.Collections;
 public class ui_barscore : MonoBehaviour {
 
 	private Gamestate estado;
-	public GUISkin GUIMenuPrincipal;
 	public Sprite sprite1;
 	public Sprite sprite2;
 	public Sprite sprite3;
 
-	float W;
-	float H;
 	// Use this for initialization
 	void Start()
 	{
-		W=Screen.width;
-		H=Screen.height;
 		estado = GameObject.Find("GameSetup").GetComponent<Gamestate>();
 	}
 	
@@ -28,8 +23,7 @@ public class ui_barscore : MonoBehaviour {
 		int p1 = Gamestate.MAX_LIGHT;
 		float porcentaje1 = Mathf.FloorToInt((puntos1*100f) /(float)p1);
 		float porcentaje2 = Mathf.FloorToInt((puntos2*100f) /(float)p1);
-		Debug.Log(porcentaje1);
-		Debug.Log(porcentaje2);
+
 		if(porcentaje1 < 20) // 0% - 20%
 		{
 			if(porcentaje1 >= 0 && porcentaje1 < 7)	{SpriteRenderer r1 =	GameObject.Find("first1").GetComponent<SpriteRenderer>();
@@ -142,26 +136,5 @@ public class ui_barscore : MonoBehaviour {
 		//aca se	 coloca la barra	
 	}
 
-	void OnGUI()
-	{
-		GUI.skin = GUIMenuPrincipal;
-		
-		float inMarginW = W*0.26f;
-		float inMarginH = H*0.33f;
-		
-		float internalW = W-(2*inMarginW);
-		float internalH = H-(inMarginH*1.6f);
 
-		GUI.Box(new Rect(22,10,34,174),"");
-			
-		GUI.Box(new Rect(internalW*2-32,10,34,174),"");
-
-		if(estado.GameOver){
-			GUI.Label(new Rect(0,0,Screen.width/2,(Screen.height)/2),"HA GANADO EL JUGADOR 1!");
-			if(GUI.Button(new Rect(0,0,Screen.width/2,((Screen.height)*2)/3),"MAIN MENU"))
-			{
-				Application.LoadLevel("MainMenu");
-			}
-		}
-	}
 }
