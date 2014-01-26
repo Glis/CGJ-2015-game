@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class MenuScript : MonoBehaviour {
@@ -34,7 +34,8 @@ public class MenuScript : MonoBehaviour {
 			//GUI.Label(new Rect(internalW/2+62,internalH/2-10,150,70),"Desarrollado Por PaperSloth!");
 			if(GUI.Button(new Rect(internalW/2-60,internalH/2-125,185,70),"PLAY"))
 			{
-			Application.LoadLevel("GameScene");
+				AutoFade.LoadLevel("GameScene",1,1,new Color(1.0f,1.0f,1.0f));
+//			 	Application.LoadLevel("GameScene");
 			}
 			if(GUI.Button (new Rect(internalW/2-60,internalH/2-45,185,70),"CREDITS"))
 			{
