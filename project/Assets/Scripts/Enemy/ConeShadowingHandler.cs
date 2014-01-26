@@ -57,6 +57,8 @@ public class ConeShadowingHandler : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject != papito){
 
+			print (other.gameObject.tag);
+
 			if (other.gameObject.CompareTag("Player2") && Input.GetKeyDown(trigger)){
 				gamestate.setPlayerRunner(false);
 				GameObject.Destroy(papito);

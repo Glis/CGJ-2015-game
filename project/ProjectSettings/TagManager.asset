@@ -7,6 +7,7 @@ TagManager:
   - Cone
   - Player2
   - Player1
+<<<<<<< HEAD
   - first
   - second
   - third
@@ -19,6 +20,10 @@ TagManager:
   - ten
   - 
   - fisrst
+=======
+  - GameSetup
+  - Wall
+>>>>>>> d6c338ae73dd43a758358f74b56ac712d799d7d6
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
