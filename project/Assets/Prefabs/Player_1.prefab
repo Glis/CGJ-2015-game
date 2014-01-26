@@ -114,7 +114,7 @@ MonoBehaviour:
   moveDown: 115
   moveLeft: 97
   moveRight: 100
-  speed: 10
+  speed: 5
   anim: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
