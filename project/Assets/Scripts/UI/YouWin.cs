@@ -39,11 +39,11 @@ public class YouWin : MonoBehaviour {
 
 			if(GUI.Button(new Rect(0,internalH/2-100,185,70),"Play Again", styleTexto))
 			{
-				AutoFade.LoadLevel("GameScene",1,1,new Color(1.0f,1.0f,1.0f));
+				AutoFade.LoadLevel("GameScene",0.7f,0.7f,new Color(0.0f,0.0f,0.0f));
 			}
 			if(GUI.Button (new Rect(0,internalH/2-45,185,70),"Menu", styleTexto))
 			{
-				AutoFade.LoadLevel("MainMenu",1,1,new Color(1.0f,1.0f,1.0f));
+				AutoFade.LoadLevel("MainMenu",0.7f,0.7f,new Color(0.0f,0.0f,0.0f));
 			}
 		GUILayout.EndArea();
 	}

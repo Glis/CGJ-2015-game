@@ -56,11 +56,11 @@ public class Gamestate : MonoBehaviour {
 	void player1Wins(bool player1){
 		GameOver = true;
 		if(player1){
-			AutoFade.LoadLevel("Winner",0.5f,0.3f,new Color(1.0f,1.0f,1.0f));
-			print ("Player 1 entro");
+			AutoFade.LoadLevel("Winner",0.5f,0.3f,new Color(0.0f,0.0f,0.0f));
+
 		}else{
-			AutoFade.LoadLevel("Winner_P2",0.5f,0.3f,new Color(1.0f,1.0f,1.0f));
-			print ("Player 2 entro");
+			AutoFade.LoadLevel("Winner_P2",0.5f,0.3f,new Color(0.0f,0.0f,0.0f));
+
 		}
 	}
 	void resetGamestate(){

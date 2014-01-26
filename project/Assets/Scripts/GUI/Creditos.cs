@@ -36,7 +36,7 @@ public class Creditos : MonoBehaviour {
 
 		if(GUI.Button (new Rect(W- inMarginW , H - inMarginH, 200,200),"Menu", styleTexto))
 		{
-			AutoFade.LoadLevel("MainMenu",1,1,new Color(1.0f,1.0f,1.0f));
+			AutoFade.LoadLevel("MainMenu",0.7f,0.7f,new Color(0.0f,0.0f,0.0f));
 		}
 	}
 }
