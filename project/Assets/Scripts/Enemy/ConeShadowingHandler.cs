@@ -33,10 +33,17 @@ public class ConeShadowingHandler : MonoBehaviour {
 			float delta = Mathf.Acos (Vector3.Dot (Vector3.up, distancia.normalized));
 			float side = player.position.x < transform.position.x ? -1 : 1;
 			//print(delta);
+<<<<<<< HEAD
 			transform.localScale = new Vector3 (1, 2 / dist, 1);
 			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, delta * side * Mathf.Rad2Deg));
 		} else {
 			if (coneRenderer.enabled) {
+=======
+			transform.localScale = new Vector3(1,1/dist,1);
+			transform.rotation = Quaternion.Euler(new Vector3(0,0,delta*side*Mathf.Rad2Deg));
+		}else{
+			if(coneRenderer.enabled){
+>>>>>>> f9fa33e4dbc88953bffeaa42c13a0d1c31d2c5fb
 				coneRenderer.enabled = false;
 				coneCollider.enabled = false;
 			}
