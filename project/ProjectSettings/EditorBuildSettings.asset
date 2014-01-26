@@ -6,14 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Intro_PS.unity
+  - enabled: 1
+    path: Assets/Scenes/Intro_Juego.unity
+  - enabled: 1
+    path: Assets/Scenes/Intro_Loop.unity
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
-  - enabled: 1
-    path: Assets/Scenes/movie.unity
   - enabled: 1
     path: Assets/Scenes/Winner.unity
   - enabled: 1
     path: Assets/Scenes/Winner_P2.unity
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+  - enabled: 0
+    path: Assets/Scenes/movie.unity
