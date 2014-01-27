@@ -1441,6 +1441,11 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21200002, guid: c18e98a25f2437a468fc06be6cd36983, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a1b6265898d6d864587f490dbd6c0836,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c18e98a25f2437a468fc06be6cd36983, type: 2}
   m_RootGameObject: {fileID: 294833261}
