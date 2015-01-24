@@ -7,6 +7,7 @@ public class HUDModifiers : MonoBehaviour {
 	public Image BarraDeMareo;
 	public Text RPMStatus;
 	public Text TimeStatus;
+	public float GameTime {get;set;}
 
 	//Elementos para 
 
@@ -37,11 +38,26 @@ public class HUDModifiers : MonoBehaviour {
 		currentMareo = maxMareo; 
 		onCoolDownMareo = false;
 		BarraDeMareoTransform.GetComponent<CanvasRenderer>().hideFlags = HideFlags.None;
+		GameTime = Time.time;
+
+		if(TimeStatus !=null)
+			TimeStatus.text = "00:00:000";
+		if(RPMStatus !=null)
+			RPMStatus.text = "0 rpms";
 	}
 	
 	// Update is called once per frame
 	void Update () {
 			CurrentMareo -= 1;
+
+		//TimeControl
+		float elapseTime = Time.time - GameTime;
+		int minutes = Mathf.FloorToInt(elapseTime/60f);
+		int secs = Mathf.FloorToInt(elapseTime%60f);
+		int fraction = Mathf.FloorToInt(elapseTime*100)%100;
+		string text = string.Format("{0:00}:{1:00}:{2:000}",minutes,secs,fraction);
+
+		TimeStatus.text = text;
 		
 	}
 
