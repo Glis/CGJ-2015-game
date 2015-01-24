@@ -758,6 +758,9 @@ MonoBehaviour:
   angularSpeed: 1
   angularIncrement: 0
   movementPush: 0
+  movementForce: 0
+  bumpCounter: 0
+  positive: 1
 --- !u!95 &850324192
 Animator:
   serializedVersion: 3
@@ -2013,7 +2016,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445792, guid: 487605db418319e4a831b0023e8475cb, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5845790, guid: 487605db418319e4a831b0023e8475cb, type: 2}
       propertyPath: m_Material
