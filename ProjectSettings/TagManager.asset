@@ -63,3 +63,7 @@ TagManager:
     userID: 4
     uniqueID: 3524559363
     locked: 0
+  - name: walls
+    userID: 6
+    uniqueID: 2328933319
+    locked: 0
