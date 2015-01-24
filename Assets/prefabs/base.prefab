@@ -697,8 +697,8 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3524559363
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4cc17b714c952cc4fba7c64de9b159b0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 47bebd3d45fd74812aa0eb1466128924, type: 3}
+  m_Color: {r: .0980392173, g: .0980392173, b: .0980392173, a: 1}
 --- !u!212 &21200008
 SpriteRenderer:
   m_ObjectHideFlags: 1
