@@ -152,7 +152,7 @@ GameObject:
   - 50: {fileID: 295931311}
   m_Layer: 0
   m_Name: rightwall
-  m_TagString: Untagged
+  m_TagString: Boundaries
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,6 +259,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: bb6fbc9483c8c49c2aa361c757f75134, type: 2}
+      propertyPath: orthographic size
+      value: 1.57500005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb6fbc9483c8c49c2aa361c757f75134, type: 2}
   m_RootGameObject: {fileID: 938158278}
@@ -277,7 +281,7 @@ GameObject:
   - 50: {fileID: 491423316}
   m_Layer: 0
   m_Name: leftwall
-  m_TagString: Untagged
+  m_TagString: Boundaries
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,7 +413,7 @@ GameObject:
   - 50: {fileID: 844192348}
   m_Layer: 0
   m_Name: roof
-  m_TagString: Untagged
+  m_TagString: Boundaries
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,8 +467,8 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3524559363
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4cc17b714c952cc4fba7c64de9b159b0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 47bebd3d45fd74812aa0eb1466128924, type: 3}
+  m_Color: {r: .0980392173, g: .0980392173, b: .0980392173, a: 1}
 --- !u!4 &844192351
 Transform:
   m_ObjectHideFlags: 0
@@ -490,7 +494,7 @@ GameObject:
   - 50: {fileID: 879241769}
   m_Layer: 0
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Boundaries
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -755,7 +759,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.34000003
+  orthographic size: 1.57500005
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

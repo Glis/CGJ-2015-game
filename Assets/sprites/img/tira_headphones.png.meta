@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 8bf64800725c5485ebf08fcbaaa4a2c8
+guid: 29a6d234692524a02993393e35afaa61
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spritesheet-protagonista_0
-    21300002: spritesheet-protagonista_1
+    21300000: tira_headphones_0
+    21300002: tira_headphones_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -23,7 +23,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: -1
   maxTextureSize: 512
   textureSettings:
     filterMode: 0
@@ -45,25 +45,25 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: spritesheet-protagonista_0
+    - name: tira_headphones_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 26
-        width: 64
-        height: 64
+        x: 0
+        y: 0
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: spritesheet-protagonista_1
+    - name: tira_headphones_1
       rect:
         serializedVersion: 2
-        x: 142
-        y: 26
-        width: 64
-        height: 64
+        x: 30
+        y: 0
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
