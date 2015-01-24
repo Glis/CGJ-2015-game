@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -15,3 +16,14 @@
 
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
+=======
+# Unity .gitignore file.
+.DS_Store
+project/Library
+project/obj
+project/Temp
+*.csproj
+*.sln
+*.userprefs
+*.unityproj
+>>>>>>> 7c490bbf624c2d8e5aebb4b78a24f965d28540be
