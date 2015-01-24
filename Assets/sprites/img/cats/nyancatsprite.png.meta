@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 1bfe012303d76416da6255831b8218e5
+guid: 0c98392dfba3f4837b816b08a2b205ba
 TextureImporter:
   fileIDToRecycleName:
-    21300000: viejecita_0
-    21300002: viejecita_1
-    21300004: viejecita_2
+    21300000: nyancatsprite_0
+    21300002: nyancatsprite_1
+    21300004: nyancatsprite_2
+    21300006: nyancatsprite_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -46,33 +47,43 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: viejecita_0
+    - name: nyancatsprite_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
+        y: 0
         width: 64
-        height: 64
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: viejecita_1
+    - name: nyancatsprite_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 2
+        y: 0
         width: 64
-        height: 64
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: viejecita_2
+    - name: nyancatsprite_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 2
+        y: 0
         width: 64
-        height: 64
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nyancatsprite_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
