@@ -11,12 +11,12 @@ GameObject:
   - 212: {fileID: 21200000}
   - 111: {fileID: 11100000}
   - 95: {fileID: 9500000}
-  - 114: {fileID: 11400000}
-  - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
+  - 50: {fileID: 5000000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: senora_1
-  m_TagString: Untagged
+  m_Name: griton_1
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.70000005, y: -1.24000001, z: 0}
+  m_LocalPosition: {x: 0, y: -.899999976, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,8 +57,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .300000012, y: .439999998}
-  m_Center: {x: 0, y: .0199999996}
+  m_Size: {x: .25, y: .300000012}
+  m_Center: {x: 0, y: .0299999993}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -68,7 +68,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 85225fdd8f9f9493a844ba5447d8a0f6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4c9eee1fcc76d4431b84513fc25e7947, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 1600592599
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6125fd8344aa24126877d9c0174a8be8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 871633a84dcdd4fdb9f860609c7da981, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
