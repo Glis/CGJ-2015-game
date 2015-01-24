@@ -134,8 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BarraDeMareo: {fileID: 11464492}
   RPMStatus: {fileID: 11431070}
-  TimeStatus: {fileID: 0}
-  BarraDeMareoTransform: {fileID: 0}
+  TimeStatus: {fileID: 11464484}
+  BarraDeMareoTransform: {fileID: 22464492}
   maxMareo: 0
   CoolDown: 0
   onCoolDownMareo: 0
