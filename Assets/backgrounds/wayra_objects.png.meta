@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: 7c3e551281f9c2146913449879ff1a08
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: wayra_objects_0
+    21300002: wayra_objects_1
+    21300004: wayra_objects_2
+    21300006: wayra_objects_3
+    21300008: wayra_objects_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,16 +27,16 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 256
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +47,56 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: wayra_objects_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 3
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wayra_objects_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 3
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wayra_objects_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 3
+        width: 41
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wayra_objects_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 17
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wayra_objects_4
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
