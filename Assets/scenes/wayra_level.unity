@@ -6114,7 +6114,6 @@ Prefab:
   m_RootGameObject: {fileID: 955672991}
   m_IsPrefabParent: 0
   m_IsExploded: 1
-<<<<<<< HEAD
 --- !u!1 &1882145740
 GameObject:
   m_ObjectHideFlags: 0
@@ -6216,8 +6215,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-=======
->>>>>>> 7ccbc682b2d733964bd8c889a011297fdbfc99ef
 --- !u!1001 &1883034335
 Prefab:
   m_ObjectHideFlags: 0
