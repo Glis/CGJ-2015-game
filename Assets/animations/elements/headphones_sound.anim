@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: senora_walk
+  m_Name: headphones_sound
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,13 +18,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 1bfe012303d76416da6255831b8218e5, type: 3}
-    - time: .416666657
-      value: {fileID: 21300002, guid: 1bfe012303d76416da6255831b8218e5, type: 3}
-    - time: .916666687
-      value: {fileID: 21300004, guid: 1bfe012303d76416da6255831b8218e5, type: 3}
-    - time: 1.35000002
-      value: {fileID: 21300000, guid: 1bfe012303d76416da6255831b8218e5, type: 3}
+      value: {fileID: 21300000, guid: 29a6d234692524a02993393e35afaa61, type: 3}
+    - time: .583333313
+      value: {fileID: 21300002, guid: 29a6d234692524a02993393e35afaa61, type: 3}
+    - time: 1.08333337
+      value: {fileID: 21300000, guid: 29a6d234692524a02993393e35afaa61, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -43,14 +41,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 1bfe012303d76416da6255831b8218e5, type: 3}
-    - {fileID: 21300002, guid: 1bfe012303d76416da6255831b8218e5, type: 3}
-    - {fileID: 21300004, guid: 1bfe012303d76416da6255831b8218e5, type: 3}
-    - {fileID: 21300000, guid: 1bfe012303d76416da6255831b8218e5, type: 3}
+    - {fileID: 21300000, guid: 29a6d234692524a02993393e35afaa61, type: 3}
+    - {fileID: 21300002, guid: 29a6d234692524a02993393e35afaa61, type: 3}
+    - {fileID: 21300000, guid: 29a6d234692524a02993393e35afaa61, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 1.36666667
+    m_StopTime: 1.10000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

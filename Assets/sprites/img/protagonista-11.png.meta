@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 6125fd8344aa24126877d9c0174a8be8
+guid: 5db86a5e5563e4a6c9b9798846933d61
 TextureImporter:
   fileIDToRecycleName:
-    21300000: persona-4_0
-    21300002: persona-4_1
-    21300004: persona-4_2
+    21300000: protagonista-11_0
+    21300002: protagonista-11_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -24,8 +23,8 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 512
+  textureFormat: -3
+  maxTextureSize: 1024
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -46,35 +45,25 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: persona-4_0
+    - name: protagonista-11_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
+        y: 0
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: persona-4_1
+    - name: protagonista-11_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 2
+        y: 0
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: persona-4_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 2
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
