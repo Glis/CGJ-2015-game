@@ -10,14 +10,18 @@ public class HUDModifiers : MonoBehaviour {
 	public float GameTime {get;set;}
 
 	//Elementos para 
-
+		
 		public RectTransform BarraDeMareoTransform;
 		private float cachedX;
 		private float minYValue;
 		private float maxYValue;
 		private int currentMareo;
 
-		private int CurrentMareo {
+		/// <summary>
+		/// Gets or sets the current mareo, esta es la condicion de muerte.
+		/// </summary>
+		/// <value>The current mareo.</value>
+		public int CurrentMareo { 
 			get { return currentMareo; 	}
 			set { 
 			currentMareo = value;
@@ -48,8 +52,8 @@ public class HUDModifiers : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-			CurrentMareo -= 1;
 
+		print (CurrentMareo -=1);
 		//TimeControl
 		float elapseTime = Time.time - GameTime;
 		int minutes = Mathf.FloorToInt(elapseTime/60f);
