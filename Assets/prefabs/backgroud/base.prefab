@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9dab189534117b4c9760673f8d6cb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 445792, guid: 487605db418319e4a831b0023e8475cb, type: 2}
+  target: {fileID: 0}
   leftwall: {fileID: 400004}
   rightwall: {fileID: 400018}
   roof: {fileID: 400020}
