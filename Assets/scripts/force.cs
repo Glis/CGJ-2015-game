@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class gamestateScript : MonoBehaviour {
+public class force : MonoBehaviour {
 
-	public int speed;
 	// Use this for initialization
 	void Start () {
-		Physics.gravity = new Vector3(0, 0.0F, 0);
+		rigidbody.AddForce(Vector3.up );
 	}
 	
 	// Update is called once per frame
