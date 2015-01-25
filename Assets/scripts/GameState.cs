@@ -81,7 +81,7 @@ public class GameState : Singleton<GameState> {
 	{	iSDead = false;
 		Factor_Damage = 20;
 		if(_global_hud==null) return;
-		_global_hud.maxMareo = 100;
+		_global_hud.maxMareo = 200;
 
 	}
 

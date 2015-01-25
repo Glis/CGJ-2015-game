@@ -1791,6 +1791,7 @@ GameObject:
   - 124: {fileID: 1883973999}
   - 81: {fileID: 1883973998}
   - 82: {fileID: 1883974003}
+  - 114: {fileID: 1883974004}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1921,6 +1922,20 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1883974004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883973997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bbbe6ced85d874882592f976888789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: wayra_level
+  exitAfterTime: 0
+  exitTime: 0
 --- !u!1 &1903052655
 GameObject:
   m_ObjectHideFlags: 0
