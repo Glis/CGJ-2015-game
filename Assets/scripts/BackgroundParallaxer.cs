@@ -34,6 +34,8 @@ public class BackgroundParallaxer : MonoBehaviour {
 		float x = Mathf.Repeat((Camera.main.transform.position.x%100f) * scrollSpeed * SPEED_MODIFIER, 1);
 		Vector2 offset = new Vector2(x,savedOffset.y);
 		renderer.sharedMaterial.SetTextureOffset("_MainTex", offset);
+
+		Debug.Log ("OFSET!" + offset);
 		
 		if(cameraVerticalBounds != null && cameraVerticalBounds.Length == 2)
 		{
