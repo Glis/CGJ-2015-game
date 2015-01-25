@@ -74,8 +74,7 @@ public class GameState : Singleton<GameState> {
 
 	// Update is called once per frame
 	void Update () {
-		//showing all time what RPM is the player 
-		//_global_hud.RPMStatus.text = (_global_player.rigidbody2D.angularVelocity ).ToString()+" RPM";
+	
 	}
 
 	public void setPlayerHitPoints()
@@ -83,7 +82,7 @@ public class GameState : Singleton<GameState> {
 		Factor_Damage = 20;
 		if(_global_hud==null) return;
 		_global_hud.maxMareo = 100;
-		_global_hud.RPMStatus.text = " RPM";
+
 	}
 
 	/// <summary>
