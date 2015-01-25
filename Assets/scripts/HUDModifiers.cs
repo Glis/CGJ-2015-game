@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HUDModifiers : MonoBehaviour {
 
 	public Image BarraDeMareo;
-	public Text RPMStatus;
+	//public Text RPMStatus;
 	public Text TimeStatus;
 	public float GameTime {get;set;}
 
@@ -46,8 +46,6 @@ public class HUDModifiers : MonoBehaviour {
 
 		if(TimeStatus !=null)
 			TimeStatus.text = "00:00:000";
-		if(RPMStatus !=null)
-			RPMStatus.text = "0 rpms";
 	}
 	
 	// Update is called once per frame
