@@ -178,8 +178,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .164187506, y: .172727287}
   m_AnchorMax: {x: .778625011, y: .754272759}
-  m_AnchoredPosition: {x: 5, y: -2}
-  m_SizeDelta: {x: 20, y: 22}
+  m_AnchoredPosition: {x: 14.125, y: -29.8360004}
+  m_SizeDelta: {x: 151, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1056988448
 MonoBehaviour:
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: dc4af064a5e2fc64ab54af1042a1a596, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -206,7 +206,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CARACAS GAME JAM R
+  m_Text: "CARACAS GAME JAM\n\nProgrammers\n\nIgnacio C\xF3rdoba - @nachovz\nJorge
+    Fuentes - @glisterk\nJuan Andr\xE9s Gonzalez - @potoy8\nRomer Ramos - @romerramos\n\n\nArt\n\nAlejandro
+    Cannizzo - @canotico\nDalien Hoek - @dalienhoek\nMarjorie Figueroa - @stephs1515"
 --- !u!222 &1056988449
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -286,6 +288,7 @@ GameObject:
   - 92: {fileID: 1566681332}
   - 124: {fileID: 1566681331}
   - 81: {fileID: 1566681330}
+  - 114: {fileID: 1566681335}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -358,6 +361,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1566681335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1566681329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39bbbe6ced85d874882592f976888789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: mainmenu
+  exitAfterTime: 1
+  exitTime: 10
 --- !u!1 &1699250085
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +466,86 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1 &1925069291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1925069292}
+  - 222: {fileID: 1925069295}
+  - 114: {fileID: 1925069294}
+  - 114: {fileID: 1925069293}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1925069292
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925069291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1987497549}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -.000312810007, y: -164.199997}
+  m_SizeDelta: {x: 233.300003, y: 28.2999992}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1925069293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925069291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15b94b78cbac9847aafe3a006785581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashing_Label: {fileID: 1925069291}
+  interval: .600000024
+--- !u!114 &1925069294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925069291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: dc4af064a5e2fc64ab54af1042a1a596, type: 3}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: PRESS SPACE TO CONTINUE
+--- !u!222 &1925069295
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925069291}
 --- !u!1 &1987497548
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,12 +575,13 @@ RectTransform:
   m_Children:
   - {fileID: 2071089584}
   - {fileID: 1056988447}
+  - {fileID: 1925069292}
   m_Father: {fileID: 1699250086}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: 12}
-  m_SizeDelta: {x: -99, y: -87}
+  m_AnchoredPosition: {x: -1, y: 3}
+  m_SizeDelta: {x: -99, y: -68}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1987497550
 MonoBehaviour:
@@ -497,7 +595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Color: {r: 0, g: 0, b: 0, a: .392156869}
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -522,6 +620,7 @@ GameObject:
   - 224: {fileID: 2071089584}
   - 222: {fileID: 2071089586}
   - 114: {fileID: 2071089585}
+  - 114: {fileID: 2071089587}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -543,7 +642,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -8, y: 107}
+  m_AnchoredPosition: {x: -.000305180001, y: 133}
   m_SizeDelta: {x: 298, y: 34}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2071089585
@@ -560,8 +659,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: dc4af064a5e2fc64ab54af1042a1a596, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -571,10 +670,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CREDITS
+  m_Text: '0 CREDITS
+
+'
 --- !u!222 &2071089586
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2071089583}
+--- !u!114 &2071089587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2071089583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15b94b78cbac9847aafe3a006785581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashing_Label: {fileID: 2071089583}
+  interval: .600000024
