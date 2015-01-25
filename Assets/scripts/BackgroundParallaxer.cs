@@ -20,8 +20,8 @@ public class BackgroundParallaxer : MonoBehaviour {
 		if(followScript != null)
 		{
 			cameraVerticalBounds = new float[2];
-			cameraVerticalBounds[0] = followScript.boundaries.position.y - followScript.boundaries.height * 0.5f + followScript.vertExtent;
-			cameraVerticalBounds[1] = followScript.boundaries.position.y + followScript.boundaries.height * 0.5f - followScript.vertExtent;
+			cameraVerticalBounds[0] = followScript.minY;
+			cameraVerticalBounds[1] = followScript.maxY;
 		}
 		float vertExtent = Camera.main.camera.orthographicSize;  
 		transform.localScale = new Vector3(2.56f * vertExtent / 1.01f * 1.1f, vertExtent) * 2 * 1.3f;
@@ -38,7 +38,8 @@ public class BackgroundParallaxer : MonoBehaviour {
 		if(cameraVerticalBounds != null && cameraVerticalBounds.Length == 2)
 		{
 			float y = 1f-Mathf.InverseLerp(cameraVerticalBounds[0], cameraVerticalBounds[1], Camera.main.transform.position.y);
-			transform.localPosition = new Vector3(0, y * scrollSpeed * VERTICAL_OFFSET_MODIFIER);
+			print (string.Format("{0}|{1}|{2}", cameraVerticalBounds[0], cameraVerticalBounds[1], Camera.main.transform.position.y));
+			transform.localPosition = new Vector3(0, y * scrollSpeed * VERTICAL_OFFSET_MODIFIER, transform.localPosition.z);
 		}
 	}
 	
