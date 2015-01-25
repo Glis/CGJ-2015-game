@@ -53,11 +53,6 @@ public class HUDModifiers : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
-		//print (CurrentMareo -=1);
-//		if(CurrentMareo < 200)
-//		print (CurrentMareo +=5);
-		//TimeControl
 		float elapseTime = Time.time - GameTime;
 		int minutes = Mathf.FloorToInt(elapseTime/60f);
 		int secs = Mathf.FloorToInt(elapseTime%60f);
@@ -65,7 +60,6 @@ public class HUDModifiers : MonoBehaviour {
 		string text = string.Format("{0:00}:{1:00}:{2:000}",minutes,secs,fraction);
 
 		TimeStatus.text = text;
-		
 	}
 
 	public IEnumerator CoolDownTimer()

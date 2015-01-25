@@ -7,8 +7,8 @@ public class cameraFollow : MonoBehaviour {
 	public Transform target;
 	public Transform leftwall,rightwall,roof,floor;
 
-	float mapX;
-	float mapY;
+	public float mapX;
+	public float mapY;
 
 	float mapWidth;
 	float mapHeight;
@@ -25,13 +25,10 @@ public class cameraFollow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-//		mapX = Mathf.Abs(rightwall.position.x - leftwall.position.x);
-//		mapY = Mathf.Abs (roof.position.y - floor.position.y);
 
 		mapWidth = boundaries.width;
 		mapHeight = boundaries.height;
 
-		//El mapa no se deberia mover!!
 		mapX = boundaries.x;
 		mapY = boundaries.y;
 
@@ -43,17 +40,6 @@ public class cameraFollow : MonoBehaviour {
 
 		minY = (boundaries.y - mapHeight / 2) + vertExtent;
 		maxY = (boundaries.y + mapHeight / 2) - vertExtent;
-
-		
-		// Calculations assume map is position at the origin
-//		minX = horzExtent;
-//		minX = horzExtent - mapX / 2.0f;
-//		maxX = mapX / 2.0f - horzExtent;
-//
-//		minY = vertExtent - mapY / 2.0f;
-//		maxY = mapY / 2.0f - vertExtent;
-
-
 	}
 	
 	// Update is called once per frame

@@ -5,6 +5,7 @@ TagManager:
   tags:
   - Object
   - Boundaries
+  - Goal
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   Builtin Layer 7: 
   User Layer 8: Background
   User Layer 9: Background_objects
-  User Layer 10: 
+  User Layer 10: Goal
   User Layer 11: 
   User Layer 12: 
   User Layer 13: 
@@ -51,10 +52,6 @@ TagManager:
     userID: 5
     uniqueID: 1468293823
     locked: 0
-  - name: gradient
-    userID: 7
-    uniqueID: 3110668611
-    locked: 0
   - name: objects
     userID: 3
     uniqueID: 1600592599
@@ -62,6 +59,10 @@ TagManager:
   - name: player
     userID: 2
     uniqueID: 6963281
+    locked: 0
+  - name: gradient
+    userID: 7
+    uniqueID: 3110668611
     locked: 0
   - name: bounds
     userID: 4

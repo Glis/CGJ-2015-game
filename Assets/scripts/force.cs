@@ -7,9 +7,8 @@ public class force : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		rigidbody2D.AddForce(Vector2.up * Random.Range(1.0F, 4.0F));
-		rigidbody2D.AddForce(Vector2.right * Random.Range(-4.0F, 4.0F));
-		rigidbody2D.AddTorque (Random.Range(-0.5F, 0.5F));
+		rigidbody2D.AddForce((new Vector2(Random.Range(1.0F, -1.0F),Random.Range(1.0F, 0.5f)))* Random.Range(2.0F, 7.0F));
+		rigidbody2D.AddTorque(Random.Range(-1.3F, 1.3F));
 	}
 	
 	// Update is called once per frame
