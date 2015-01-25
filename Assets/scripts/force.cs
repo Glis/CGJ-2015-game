@@ -3,6 +3,8 @@ using System.Collections;
 
 public class force : MonoBehaviour {
 
+	public AudioSource scream;
+
 	// Use this for initialization
 	void Start () {
 		rigidbody2D.AddForce(Vector2.up * Random.Range(1.0F, 4.0F));
@@ -12,6 +14,12 @@ public class force : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
+	}
+
+	void OnCollisionEnter2D(Collision2D coll){
+		if (scream != null) {
+			scream.Play ();
+		}
 	}
 }

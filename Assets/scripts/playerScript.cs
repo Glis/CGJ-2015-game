@@ -25,6 +25,9 @@ public class playerScript : MonoBehaviour {
 	public int bumpCounter = 0;
 	public bool positive = true;
 
+	//sound effects
+	public AudioSource collisionSound;
+
 	// Use this for initialization
 	void Start () {
 		movementSpeed = 0.1f;
@@ -38,9 +41,9 @@ public class playerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print ("veloc"+rigidbody2D.velocity );
+		//print ("veloc"+rigidbody2D.velocity );
 		if (Input.GetKeyDown("space")) {
-			print("pressed Space");
+			//print("pressed Space");
 			movementSpeed = rigidbody2D.velocity.magnitude + movementSpeed;
 			moveInADirection((Vector2)(fan.position-transform.position) *-1);
 //			rigidbody2D.velocity += ((Vector2)(fan.position-transform.position)) *(-1)* movementPush;
@@ -57,11 +60,13 @@ public class playerScript : MonoBehaviour {
 	}
 
 	void Bump(Vector2 directionOfBump){
-		if (bumpCounter < 20)
+		collisionSound.Play();
+		if (bumpCounter < 20) {
 			bumpCounter++;
-		else if (bumpCounter == 20)
+			print("BUMP!");
+		}else if(bumpCounter == 20){
 			print ("PERDISTE SAPO");
-
+		}
 		spinInADirection(!positive);
 		moveInADirection (directionOfBump);
 	}

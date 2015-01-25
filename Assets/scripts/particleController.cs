@@ -3,6 +3,8 @@ using System.Collections;
 
 public class particleController : MonoBehaviour {
 
+	public AudioSource audio1;
+
 	// Use this for initialization
 	void Start () {
 		// You can use particleSystem instead of
@@ -11,11 +13,14 @@ public class particleController : MonoBehaviour {
 		particleSystem.emissionRate = 0;
 		particleSystem.renderer.sortingLayerName = "player";
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if( Input.GetKeyDown("space") ) {
-			particleSystem.Emit(50);    
+			particleSystem.Emit(50);
+			//if(audio1.isReadyToPlay){
+			audio1.Play();
+			//}
 		}
 	}
 }
