@@ -15,8 +15,8 @@ GameObject:
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: headphones_1
-  m_TagString: Untagged
+  m_Name: mummy
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.527999997, z: 0}
+  m_LocalPosition: {x: 2.55220819, y: .0613552518, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .300000012, y: .300000012}
+  m_Size: {x: .349999994, y: .5}
   m_Center: {x: 0, y: 0}
 --- !u!95 &9500000
 Animator:
@@ -68,7 +68,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0f70d241c9ccb4e29b2786d045cdfd1e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 947d7a2f724aa4881bcbd0b1484ef0d5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -118,9 +118,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 1468293823
+  m_SortingLayerID: 1600592599
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29a6d234692524a02993393e35afaa61, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 778e9afc5cb79491abf3ac70d2af5dcf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
