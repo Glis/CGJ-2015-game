@@ -12,14 +12,32 @@ public class GameState : Singleton<GameState> {
 	public HUDModifiers _global_hud;
 	public bool iSDead;
 	public bool levelFinished;
+	public string [] niveles = {"wayra_level","cat_level","haunted_level"};
+	public int ActualLevel = 0;
 	// Use this for initialization
 	void Start () {
+		DontDestroyOnLoad(this.gameObject);
 		Factor_Damage = 20;
 		_global_player = GameObject.Find("player").GetComponent<playerScript>();
 		_global_hud = GameObject.Find ("HUD").GetComponent<HUDModifiers>();
 		acumulador = 0.0f;
 		GameResetState();
 		levelFinished = false;
+	}
+
+	public void NextLevel ()
+	{
+		ActualLevel += 1;
+		if(ActualLevel >= 3)
+		{
+			Application.LoadLevel("creditsscene");
+			Destroy(gameObject);
+		}
+		else
+		{
+			Application.LoadLevel(niveles[ActualLevel]);
+			GameResetState();
+		}
 	}
 
 	public void AddDamage()
@@ -41,6 +59,7 @@ public class GameState : Singleton<GameState> {
 
 	public void setPlayerHitPoints()
 	{	iSDead = false;
+		Factor_Damage = 20;
 		_global_hud.maxMareo = 100;
 		_global_hud.RPMStatus.text = " RPM";
 	}
