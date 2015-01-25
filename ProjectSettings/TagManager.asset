@@ -51,13 +51,17 @@ TagManager:
     userID: 5
     uniqueID: 1468293823
     locked: 0
-  - name: player
-    userID: 2
-    uniqueID: 6963281
+  - name: gradient
+    userID: 7
+    uniqueID: 3110668611
     locked: 0
   - name: objects
     userID: 3
     uniqueID: 1600592599
+    locked: 0
+  - name: player
+    userID: 2
+    uniqueID: 6963281
     locked: 0
   - name: bounds
     userID: 4
@@ -66,8 +70,4 @@ TagManager:
   - name: walls
     userID: 6
     uniqueID: 2328933319
-    locked: 0
-  - name: gradient
-    userID: 7
-    uniqueID: 3110668611
     locked: 0
