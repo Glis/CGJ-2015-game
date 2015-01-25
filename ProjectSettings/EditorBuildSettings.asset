@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/scenes/wayra_level.unity
+  - enabled: 1
+    path: Assets/scenes/cat_level.unity
+  - enabled: 1
+    path: Assets/scenes/haunted_level.unity
