@@ -9,12 +9,13 @@ public class particleController : MonoBehaviour {
 		// gameObject.particleSystem.
 		// They are the same, if I may say so
 		particleSystem.emissionRate = 0;
+		particleSystem.renderer.sortingLayerName = "player";
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if( Input.GetKeyDown("space") ) {
-			particleSystem.Emit(20);    
+			particleSystem.Emit(50);    
 		}
 	}
 }
