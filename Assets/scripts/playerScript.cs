@@ -32,7 +32,7 @@ public class playerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gamestate = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameState> ();
+		gamestate = GameState.Instance;
 
 		movementSpeed = 0.1f;
 		angularSpeed = 40f;
