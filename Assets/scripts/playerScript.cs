@@ -32,7 +32,7 @@ public class playerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gamestate = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameState> ();
+		gamestate = GameState.Instance;
 
 		movementSpeed = 0.1f;
 		angularSpeed = 40f;
@@ -136,8 +136,7 @@ public class playerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		print ("GRAVEDAD RESTAURADA!!!");
-		Destroy (other.gameObject);
+		print ("GRAVEDAD RESTAURADA!!!"+other.gameObject.name);
 		//Cambiar el sprite del jugador por un sprite con la herramienta
 
 		rigidbody2D.gravityScale = 1;
@@ -149,7 +148,8 @@ public class playerScript : MonoBehaviour {
 			g.rigidbody2D.drag = 0.1f;
 		}
 
-		gamestate.levelFinished = true;
+		GameState.Instance.NextLevel ();
+		Destroy (other.gameObject.transform.parent.gameObject);
 	}
 
 
