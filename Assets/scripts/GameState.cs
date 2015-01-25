@@ -14,6 +14,9 @@ public class GameState : Singleton<GameState> {
 	public bool levelFinished;
 	// Use this for initialization
 	void Start () {
+		Factor_Damage = 20;
+		_global_player = GameObject.Find("player").GetComponent<playerScript>();
+		_global_hud = GameObject.Find ("HUD").GetComponent<HUDModifiers>();
 		acumulador = 0.0f;
 		GameResetState();
 		levelFinished = false;
