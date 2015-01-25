@@ -54,7 +54,8 @@ public class HUDModifiers : MonoBehaviour {
 	void Update () {
 
 
-		//print (CurrentMareo -=1);
+//		print (CurrentMareo -=1);
+
 //		if(CurrentMareo < 200)
 //		print (CurrentMareo +=5);
 		//TimeControl

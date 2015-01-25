@@ -11,10 +11,12 @@ public class GameState : MonoBehaviour {
 	public playerScript _global_player;
 	public HUDModifiers _global_hud;
 	public bool iSDead;
+	public bool levelFinished;
 	// Use this for initialization
 	void Start () {
 		acumulador = 0.0f;
 		GameResetState();
+		levelFinished = false;
 	}
 	
 	// Update is called once per frame
