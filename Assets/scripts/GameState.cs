@@ -23,7 +23,7 @@ public class GameState : MonoBehaviour {
 		if(_global_hud.CurrentMareo >0 || _global_player.bumpCounter < 20)
 		{
 			//showing all time what RPM is the player 
-			_global_hud.RPMStatus.text = (_global_player.angularSpeed / Mathf.Rad2Deg).ToString()+" RPM";
+			_global_hud.RPMStatus.text = (_global_player.rigidbody2D.angularVelocity * Mathf.Rad2Deg).ToString()+" RPM";
 
 			//if we use the bumpCounter
 			{
