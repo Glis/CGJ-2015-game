@@ -15,5 +15,8 @@ EditorBuildSettings:
     path: Assets/scenes/haunted_level.unity
   - enabled: 1
     path: Assets/scenes/gameover.unity
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/scenes/creditsscene.unity
+=======
+>>>>>>> 360647a986302fef1497704e7a67e747f98f3dba
