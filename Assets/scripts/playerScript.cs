@@ -48,9 +48,11 @@ public class playerScript : MonoBehaviour {
 		//print ("veloc"+rigidbody2D.velocity );
 		if (Input.GetKeyDown("space")) {
 			//print("pressed Space");
-			movementSpeed = rigidbody2D.velocity.magnitude + movementSpeed;
-			moveInADirection((Vector2)(fan.position-transform.position) *-1);
-//			rigidbody2D.velocity += ((Vector2)(fan.position-transform.position)) *(-1)* movementPush;
+			if(!gamestate.levelFinished){
+				movementSpeed = rigidbody2D.velocity.magnitude + movementSpeed;
+				moveInADirection((Vector2)(fan.position-transform.position) *-1);
+	//			rigidbody2D.velocity += ((Vector2)(fan.position-transform.position)) *(-1)* movementPush;
+			}
 		}
 	}
 
@@ -65,14 +67,16 @@ public class playerScript : MonoBehaviour {
 
 	void Bump(Vector2 directionOfBump){
 		collisionSound.Play();
-		if (bumpCounter < 20) {
-			bumpCounter++;
-			print("BUMP!");
-		}else if(bumpCounter == 20){
-			print ("PERDISTE SAPO");
+		if(!gamestate.levelFinished){
+			if (bumpCounter < 20) {
+				bumpCounter++;
+				print("BUMP!"+bumpCounter);
+			}else if(bumpCounter == 20){
+				print ("PERDISTE SAPO");
+			}
+			spinInADirection(!rotationIsPositive);
+				moveInADirection (directionOfBump);
 		}
-		spinInADirection(!rotationIsPositive);
-		moveInADirection (directionOfBump);
 	}
 
 	void spinInADirection (bool pos){
@@ -113,34 +117,12 @@ public class playerScript : MonoBehaviour {
 		if (coll.gameObject.tag == "Object") {
 			print ("ouch Object");
 			//Calculating the direction of themovement
-			
-//			rigidbody2D.velocity = coll.contacts [0].normal.normalized * movementSpeed;
-//			rigidbody2D.AddForce(la_normal.normalized) * movementSpeed;
-////			rigidbody2D.angularVelocity = angularSpeed;
 			Bump(la_normal);
 		}
 
 		if (coll.gameObject.tag == "Boundaries") {
 			print ("ouch Boundaries"+la_normal );
-//			print ();
 
-//			if(coll.gameObject.name == "leftwall"){
-////				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x * -1,rigidbody2D.velocity.y);
-////				rigidbody2D.velocity = new Vector2(1.0f,rigidbody2D.velocity.normalized.y) * movementSpeed /** rigidbody2D.velocity.magnitude*/;
-//				rigidbody2D.AddForce(new Vector2(1.0f,rigidbody2D.velocity.y)*movementSpeed);
-//			}else if(coll.gameObject.name == "rightwall"){
-////				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x * -1,rigidbody2D.velocity.y);
-////				rigidbody2D.velocity = new Vector2(-1.0f,rigidbody2D.velocity.normalized.y) * movementSpeed /** rigidbody2D.velocity.magnitude*/;
-//				rigidbody2D.AddForce(new Vector2(-1.0f,rigidbody2D.velocity.y)*movementSpeed);
-//			}else if(coll.gameObject.name == "roof"){
-////				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, rigidbody2D.velocity.y * -1);
-////				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.normalized.x,-1.0f) * movementSpeed /** rigidbody2D.velocity.magnitude*/;
-//				rigidbody2D.AddForce(new Vector2(rigidbody2D.velocity.x,-1.0f)*movementSpeed);
-//			}else if(coll.gameObject.name == "floor"){
-////				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, rigidbody2D.velocity.y * -1);
-////				rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.normalized.x,1.0f) * movementSpeed /** rigidbody2D.velocity.magnitude*/;
-//				rigidbody2D.AddForce(new Vector2(rigidbody2D.velocity.x,1.0f)*movementSpeed);
-//			}
 			if(coll.gameObject.name == "leftwall" || coll.gameObject.name == "rightwall"){
 				Bump(new Vector2(la_normal.x,rigidbody2D.velocity.y));
 			}else if(coll.gameObject.name == "roof" || coll.gameObject.name == "floor"){
@@ -153,6 +135,18 @@ public class playerScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		print ("GRAVEDAD RESTAURADA!!!");
+		Destroy (other.gameObject);
+		//Cambiar el sprite del jugador por un sprite con la herramienta
+
+		rigidbody2D.gravityScale = 1;
+		rigidbody2D.angularDrag = 0.8f;
+		rigidbody2D.drag = 0.1f;
+
+		foreach (GameObject g in GameObject.FindGameObjectsWithTag("Object")) {
+			g.rigidbody2D.gravityScale = 1;
+			g.rigidbody2D.drag = 0.1f;
+		}
+
 		gamestate.levelFinished = true;
 	}
 

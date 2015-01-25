@@ -38,7 +38,7 @@ public class BackgroundParallaxer : MonoBehaviour {
 		if(cameraVerticalBounds != null && cameraVerticalBounds.Length == 2)
 		{
 			float y = 1f-Mathf.InverseLerp(cameraVerticalBounds[0], cameraVerticalBounds[1], Camera.main.transform.position.y);
-			print (string.Format("{0}|{1}|{2}", cameraVerticalBounds[0], cameraVerticalBounds[1], Camera.main.transform.position.y));
+//			print (string.Format("{0}|{1}|{2}", cameraVerticalBounds[0], cameraVerticalBounds[1], Camera.main.transform.position.y));
 			transform.localPosition = new Vector3(0, y * scrollSpeed * VERTICAL_OFFSET_MODIFIER, transform.localPosition.z);
 		}
 	}
