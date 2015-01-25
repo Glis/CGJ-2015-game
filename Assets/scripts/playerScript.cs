@@ -24,7 +24,7 @@ public class playerScript : MonoBehaviour {
 	//counters & Flags(life)
 	public int bumpCounter = 0;
 	public bool rotationIsPositive = true;
-//	private bool levelFinished = false;
+	private bool levelFinished = false;
 
 	//sound effects
 	public AudioSource collisionSound;
@@ -49,7 +49,7 @@ public class playerScript : MonoBehaviour {
 		//print ("veloc"+rigidbody2D.velocity );
 		if (Input.GetKeyDown("space")) {
 			//print("pressed Space");
-			if(!gamestate.levelFinished){
+			if(!levelFinished){
 				movementSpeed = rigidbody2D.velocity.magnitude + movementSpeed;
 				moveInADirection((Vector2)(fan.position-transform.position) *-1);
 	//			rigidbody2D.velocity += ((Vector2)(fan.position-transform.position)) *(-1)* movementPush;
@@ -68,7 +68,7 @@ public class playerScript : MonoBehaviour {
 
 	void Bump(Vector2 directionOfBump){
 		collisionSound.Play();
-		if(!gamestate.levelFinished){
+		if(!levelFinished){
 			if (bumpCounter < 20) {
 				bumpCounter++;
 				GameState.Instance.AddDamage();
@@ -139,6 +139,7 @@ public class playerScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		print ("GRAVEDAD RESTAURADA!!!"+other.gameObject.name);
 		//Cambiar el sprite del jugador por un sprite con la herramienta
+		levelFinished = true;
 
 		rigidbody2D.gravityScale = 1;
 		rigidbody2D.angularDrag = 0.8f;
