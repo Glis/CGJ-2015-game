@@ -10,8 +10,10 @@ public class GoToSceneScript : MonoBehaviour
 	
 	IEnumerator Start()
 	{
-		if(exitAfterTime)
-			yield return new WaitForSeconds(exitTime);
+		if (exitAfterTime) {
+			yield return new WaitForSeconds (exitTime);
+			Application.LoadLevel(sceneName);
+		}
 		yield return null;
 	}
 	
