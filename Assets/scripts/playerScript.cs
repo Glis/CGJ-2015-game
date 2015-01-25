@@ -24,6 +24,7 @@ public class playerScript : MonoBehaviour {
 	//counters & Flags(life)
 	public int bumpCounter = 0;
 	public bool rotationIsPositive = true;
+//	private bool levelFinished = false;
 
 	//sound effects
 	public AudioSource collisionSound;
