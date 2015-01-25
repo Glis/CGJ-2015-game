@@ -17,7 +17,7 @@ public class force : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
-		if (scream != null) {
+		if (scream != null && coll.gameObject.tag == "Player") {
 			scream.Play ();
 		}
 	}

@@ -6,12 +6,12 @@ public class nyan_force : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//rigidbody2D.AddForce(Vector2.up * 0.5F);
-		rigidbody2D.AddForce(Vector2.right * -1000f);
+		rigidbody2D.AddForce(Vector2.right * -100f);
 		//rigidbody2D.AddTorque (Random.Range(-0.2F, 0.2F));
 
 	}
 
-	public float maxSpeed = 150f;//Replace with your max speed
+	public float maxSpeed = 100f;//Replace with your max speed
 
 	// Update is called once per frame
 	void Update () {
@@ -20,6 +20,6 @@ public class nyan_force : MonoBehaviour {
 			rigidbody2D.velocity = rigidbody2D.velocity.normalized * maxSpeed;
 		}
 
-		rigidbody2D.transform.position = rigidbody2D.transform.position.x <= -4f ? new Vector3(50f,4.4f,0f) : rigidbody2D.transform.position;
+		rigidbody2D.transform.position = rigidbody2D.transform.position.x <= -0.4f ? new Vector3(48f,4.81f,0f) : rigidbody2D.transform.position;
 	}
 }
