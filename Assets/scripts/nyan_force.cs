@@ -20,6 +20,6 @@ public class nyan_force : MonoBehaviour {
 			rigidbody2D.velocity = rigidbody2D.velocity.normalized * maxSpeed;
 		}
 
-		rigidbody2D.transform.position = rigidbody2D.transform.position.x <= -0.4f ? new Vector3(48f,4.81f,0f) : rigidbody2D.transform.position;
+		rigidbody2D.transform.position = rigidbody2D.transform.position.x <= -3.8f ? new Vector3(48f,4.81f,0f) : rigidbody2D.transform.position;
 	}
 }
