@@ -30,6 +30,7 @@ public class playerScript : MonoBehaviour {
 	public AudioSource collisionSound;
 
 	private GameState gamestate;
+	public GameObject deadGO;
 
 	// Use this for initialization
 	void Start () {
@@ -74,8 +75,10 @@ public class playerScript : MonoBehaviour {
 				GameState.Instance.AddDamage();
 				print("BUMP!"+bumpCounter);
 			}else if(bumpCounter == 20){
-				print ("PERDISTE SAPO");
+				deadGO.SetActive(true);
+				Camera.main.GetComponent<cameraFollow>().target = deadGO.transform;
 				GameState.Instance.Dead ();
+				gameObject.SetActive(false);
 			}
 			spinInADirection(!rotationIsPositive);
 				moveInADirection (directionOfBump);
