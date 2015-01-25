@@ -23,13 +23,17 @@ public class playerScript : MonoBehaviour {
 
 	//counters & Flags(life)
 	public int bumpCounter = 0;
-	public bool positive = true;
+	public bool rotationIsPositive = true;
 
 	//sound effects
 	public AudioSource collisionSound;
 
+	private GameState gamestate;
+
 	// Use this for initialization
 	void Start () {
+		gamestate = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameState> ();
+
 		movementSpeed = 0.1f;
 		angularSpeed = 40f;
 		angularIncrement = 50f;
@@ -67,7 +71,7 @@ public class playerScript : MonoBehaviour {
 		}else if(bumpCounter == 20){
 			print ("PERDISTE SAPO");
 		}
-		spinInADirection(!positive);
+		spinInADirection(!rotationIsPositive);
 		moveInADirection (directionOfBump);
 	}
 
@@ -146,6 +150,12 @@ public class playerScript : MonoBehaviour {
 				    
 //			coll.gameObject.SendMessage("ApplyDamage", 10);
 	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		print ("GRAVEDAD RESTAURADA!!!");
+		gamestate.levelFinished = true;
+	}
+
 
 	void OnDrawGizmos(){
 //		Gizmos.color = Color.green;
