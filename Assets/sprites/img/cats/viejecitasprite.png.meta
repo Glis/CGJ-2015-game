@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 7316c0ed34f8f4bbd99898d8ba7ae917
+guid: fd7cc2b4005934483bd3b692d4e1ee94
 TextureImporter:
   fileIDToRecycleName:
-    21300000: felix_0
-    21300002: felix_1
+    21300000: viejecitasprite_0
+    21300002: viejecitasprite_1
+    21300004: viejecitasprite_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,21 +46,31 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: felix_0
+    - name: viejecitasprite_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 2
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: felix_1
+    - name: viejecitasprite_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 2
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: viejecitasprite_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2
         width: 64
         height: 64
       alignment: 0
