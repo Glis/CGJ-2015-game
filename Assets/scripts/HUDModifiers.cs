@@ -53,7 +53,10 @@ public class HUDModifiers : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//print (CurrentMareo -=1);
+
+		print (CurrentMareo -=1);
+//		if(CurrentMareo < 200)
+//		print (CurrentMareo +=5);
 		//TimeControl
 		float elapseTime = Time.time - GameTime;
 		int minutes = Mathf.FloorToInt(elapseTime/60f);
@@ -77,13 +80,13 @@ public class HUDModifiers : MonoBehaviour {
 		float currentYValue = MapValue(currentMareo, maxMareo, 0, minYValue, maxYValue);
 		BarraDeMareoTransform.position = new Vector3(cachedX,currentYValue);
 
-		if (currentYValue > maxMareo/2) // me estoy mareando
+		if (currentYValue > maxMareo/2) // estoy bien
 		{
-			BarraDeMareo.color = new Color32((byte)MapValue(currentYValue,maxMareo/2,0,0,maxMareo),255,0,255);
+			BarraDeMareo.color = new Color32(255,(byte)MapValue(currentYValue,maxMareo/2,maxMareo,0,-maxMareo),0,255);
 		
-		}else // estoy bien
+		}else //se mareo
 		{
-			BarraDeMareo.color = new Color32(255,(byte)MapValue(currentYValue,maxMareo/2,maxMareo,0,maxMareo),0,255);	
+			BarraDeMareo.color = new Color32((byte)MapValue(currentYValue,0,maxMareo/2,-maxMareo/2,0),255,0,255);	
 		}
 	}
 

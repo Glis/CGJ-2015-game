@@ -120,7 +120,7 @@ MonoBehaviour:
   RPMStatus: {fileID: 11431070}
   TimeStatus: {fileID: 11464484}
   BarraDeMareoTransform: {fileID: 22464492}
-  maxMareo: 50
+  maxMareo: 100
   CoolDown: 0
   onCoolDownMareo: 0
 --- !u!114 &11431070
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .0758621693, g: 1, b: 0, a: 1}
+  m_Color: {r: .365517259, g: 1, b: 0, a: 1}
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -399,10 +399,10 @@ RectTransform:
   - {fileID: 22464492}
   m_Father: {fileID: 22464494}
   m_RootOrder: 2
-  m_AnchorMin: {x: .936503112, y: .0874999985}
-  m_AnchorMax: {x: .967740774, y: .92750001}
-  m_AnchoredPosition: {x: 0, y: -1}
-  m_SizeDelta: {x: 16, y: 11}
+  m_AnchorMin: {x: .936503112, y: .0433359556}
+  m_AnchorMax: {x: .971180797, y: .374569148}
+  m_AnchoredPosition: {x: -.5, y: 88.0950012}
+  m_SizeDelta: {x: 16, y: 184.869995}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22464492
 RectTransform:
@@ -416,10 +416,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22464488}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 136}
-  m_SizeDelta: {x: -12, y: 264}
+  m_AnchorMin: {x: .5, y: 0}
+  m_AnchorMax: {x: .5, y: 0}
+  m_AnchoredPosition: {x: 0, y: -130.5}
+  m_SizeDelta: {x: 18, y: 275}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22464494
 RectTransform:

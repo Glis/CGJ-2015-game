@@ -7,6 +7,7 @@ public class GameState : MonoBehaviour {
 	public int points;
 	public int Factor_Damage;
 	private float acumulador;
+	private bool onlyone_register = false;
 	public playerScript _global_player;
 	public HUDModifiers _global_hud;
 	public bool iSDead;
@@ -19,28 +20,35 @@ public class GameState : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(!iSDead && _global_hud.CurrentMareo >0)
+		if(_global_hud.CurrentMareo >0 || _global_player.bumpCounter < 20)
 		{
 			//showing all time what RPM is the player 
-			_global_hud.RPMStatus.text = (Mathf.Rad2Deg*_global_player.angularSpeed).ToString()+" RPM";
+			_global_hud.RPMStatus.text = (_global_player.angularSpeed / Mathf.Rad2Deg).ToString()+" RPM";
 
-			//if whe use the bumpCounter
+			//if we use the bumpCounter
 			{
 				var convert_unit = Mathf.FloorToInt(_global_hud.maxMareo / Factor_Damage);
-				
-				if(_global_player.bumpCounter <= Factor_Damage)
-					_global_hud.CurrentMareo = convert_unit;
+				if(points == _global_player.bumpCounter && onlyone_register == true)
+				{
+					_global_hud.CurrentMareo += convert_unit;
+					onlyone_register = false;
+				}
+				else if(points != _global_player.bumpCounter)
+				{
+					points = _global_player.bumpCounter;
+					onlyone_register = true;
+				}
 			}
 			
-			//if whe use AngularSpeed to calculate spins
-			{
-				var Frecuency = _global_player.angularSpeed / Mathf.Deg2Rad*(2.0f*Mathf.PI);
-				acumulador += ( _global_hud.maxMareo / ( _global_player.angularSpeed * Mathf.Rad2Deg ));
-				_global_hud.CurrentMareo += Mathf.FloorToInt(acumulador);
-			}
+//			//if we use AngularSpeed to calculate spins
+//			{
+//				var Frecuency = _global_player.angularSpeed / Mathf.Deg2Rad*(2.0f*Mathf.PI);
+//				acumulador += ( _global_hud.maxMareo / ( _global_player.angularSpeed * Mathf.Rad2Deg ));
+//				_global_hud.CurrentMareo += Mathf.FloorToInt(acumulador);
+//			}
 
 		}
-		else if (_global_hud.CurrentMareo <=0)
+		else if (_global_hud.CurrentMareo <=0 || _global_player.bumpCounter == 20)
 		{
 			iSDead = true;
 		}
