@@ -69,6 +69,30 @@ AnimationClip:
     path: 
     classID: 224
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 13
+        inSlope: 2.80991721
+        outSlope: 2.80991721
+        tangentMode: 10
+      - time: 6.05000019
+        value: 30
+        inSlope: -208.595245
+        outSlope: -208.595245
+        tangentMode: 10
+      - time: 6.08333349
+        value: 16
+        inSlope: -420.000397
+        outSlope: -420.000397
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_AnchoredPosition.y
+    path: Image
+    classID: 224
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -148,6 +172,30 @@ AnimationClip:
       m_PostInfinity: 2
     attribute: m_AnchoredPosition.y
     path: 
+    classID: 224
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 13
+        inSlope: 2.80991721
+        outSlope: 2.80991721
+        tangentMode: 10
+      - time: 6.05000019
+        value: 30
+        inSlope: -208.595245
+        outSlope: -208.595245
+        tangentMode: 10
+      - time: 6.08333349
+        value: 16
+        inSlope: -420.000397
+        outSlope: -420.000397
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_AnchoredPosition.y
+    path: Image
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []
