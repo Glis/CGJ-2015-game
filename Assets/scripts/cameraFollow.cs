@@ -18,7 +18,10 @@ public class cameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		mapX = Mathf.Abs(rightwall.position.x - leftwall.position.x);
-		mapY = Mathf.Abs (roof.position.x - floor.position.y);
+		//mapY = Mathf.Abs (roof.position.x - floor.position.y);
+		//Esta restabdo la posicion en x??? no deberia sumarse?
+
+		mapY = Mathf.Abs (roof.position.y + floor.position.y);
 
 		float vertExtent = Camera.main.camera.orthographicSize;    
 		float horzExtent = vertExtent * Screen.width / Screen.height;
