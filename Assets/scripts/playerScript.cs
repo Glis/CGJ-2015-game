@@ -70,9 +70,11 @@ public class playerScript : MonoBehaviour {
 		if(!gamestate.levelFinished){
 			if (bumpCounter < 20) {
 				bumpCounter++;
+				GameState.Instance.AddDamage();
 				print("BUMP!"+bumpCounter);
 			}else if(bumpCounter == 20){
 				print ("PERDISTE SAPO");
+				GameState.Instance.Dead ();
 			}
 			spinInADirection(!rotationIsPositive);
 				moveInADirection (directionOfBump);
