@@ -13,13 +13,14 @@ public class playerScript : MonoBehaviour {
 	private const float INITIAL_TORQUE = 2f;
 
 	//Vars
+	public int max_bumps;
 	public float movementSpeed;
 	public float angularSpeed;
 	public float angularIncrement;
 	public float movementPush;
 	public float movementForce;
 	private Vector2 la_normal;
-	private Vector2 colPoint;
+//	private Vector2 colPoint;
 
 	//counters & Flags(life)
 	public int bumpCounter = 0;
@@ -29,13 +30,12 @@ public class playerScript : MonoBehaviour {
 	//sound effects
 	public AudioSource collisionSound;
 
-	private GameState gamestate;
 	public GameObject deadGO;
 
 	// Use this for initialization
 	void Start () {
-		gamestate = GameState.Instance;
 
+		max_bumps = 20;
 		movementSpeed = 0.1f;
 		angularSpeed = 40f;
 		angularIncrement = 50f;
@@ -70,11 +70,11 @@ public class playerScript : MonoBehaviour {
 	void Bump(Vector2 directionOfBump){
 		collisionSound.Play();
 		if(!levelFinished){
-			if (bumpCounter < 20) {
-				bumpCounter++;
+			if (bumpCounter < max_bumps) {
 				GameState.Instance.AddDamage();
 				print("BUMP!"+bumpCounter);
-			}else if(bumpCounter == 20){
+				bumpCounter++;
+			}else if(bumpCounter == max_bumps){
 				deadGO.SetActive(true);
 				Camera.main.GetComponent<cameraFollow>().target = deadGO.transform;
 				GameState.Instance.Dead ();
@@ -119,11 +119,14 @@ public class playerScript : MonoBehaviour {
 		la_normal = coll.contacts [0].normal;
 		la_normal.Normalize();
 		
-		colPoint = coll.contacts [0].point;
+//		colPoint = coll.contacts [0].point;
 		if (coll.gameObject.tag == "Object") {
 			print ("ouch Object");
 			//Calculating the direction of themovement
-			Bump(la_normal);
+
+//			Bump(la_normal);
+			Vector2 dir = (transform.position-coll.gameObject.transform.position).normalized;
+			Bump(dir);
 		}
 
 		if (coll.gameObject.tag == "Boundaries") {
