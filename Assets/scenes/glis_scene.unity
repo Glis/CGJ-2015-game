@@ -2335,7 +2335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fan: {fileID: 1440435929}
-  max_bumps: 20
+  max_bumps: 4
   movementSpeed: 0
   angularSpeed: 1
   angularIncrement: 0
@@ -3114,6 +3114,10 @@ Prefab:
     - target: {fileID: 445792, guid: 487605db418319e4a831b0023e8475cb, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445790, guid: 487605db418319e4a831b0023e8475cb, type: 2}
+      propertyPath: max_bumps
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 487605db418319e4a831b0023e8475cb, type: 2}

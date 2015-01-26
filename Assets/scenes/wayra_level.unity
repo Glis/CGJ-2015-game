@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fan: {fileID: 1686795737}
-  max_bumps: 0
+  max_bumps: 20
   movementSpeed: 0
   angularSpeed: 1
   angularIncrement: 0
@@ -5600,6 +5600,10 @@ Prefab:
       propertyPath: deadGO
       value: 
       objectReference: {fileID: 725000228}
+    - target: {fileID: 11445790, guid: 487605db418319e4a831b0023e8475cb, type: 2}
+      propertyPath: max_bumps
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 487605db418319e4a831b0023e8475cb, type: 2}
   m_RootGameObject: {fileID: 110415201}
