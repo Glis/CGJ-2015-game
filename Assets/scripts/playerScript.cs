@@ -34,8 +34,6 @@ public class playerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		max_bumps = 20;
 		movementSpeed = 0.1f;
 		angularSpeed = 40f;
 		angularIncrement = 50f;
