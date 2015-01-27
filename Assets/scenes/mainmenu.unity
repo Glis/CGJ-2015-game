@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: dc4af064a5e2fc64ab54af1042a1a596, type: 3}
-    m_FontSize: 20
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1054,7 +1054,6 @@ GameObject:
   - 224: {fileID: 1005869805}
   - 222: {fileID: 1005869809}
   - 114: {fileID: 1005869808}
-  - 114: {fileID: 1005869806}
   - 114: {fileID: 1005869810}
   m_Layer: 5
   m_Name: Panel
@@ -1081,17 +1080,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2, y: -19.5}
   m_SizeDelta: {x: 33, y: 28}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &1005869806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1005869804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 569d71ba524ccb044b6c292f6c3c0374, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1005869808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,7 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashing_Label: {fileID: 1005869804}
-  interval: 9
+  interval: 13
 --- !u!1 &1046512214
 GameObject:
   m_ObjectHideFlags: 0

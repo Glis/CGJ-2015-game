@@ -9,10 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
-  m_Layer: 9
+  - 60: {fileID: 6057882}
+  m_Layer: 0
   m_Name: poceta
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.8699989, y: -.660000026, z: 0}
+  m_LocalPosition: {x: 42.8400002, y: .560000002, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46,8 +46,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6100000
-BoxCollider2D:
+--- !u!60 &6057882
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,8 +55,17 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .340000004, y: .469999999}
-  m_Center: {x: 0, y: 0}
+  m_Poly:
+    m_Paths:
+    - - {x: -.0524120331, y: .197609514}
+      - {x: -.0518188477, y: .0380475819}
+      - {x: -.163202286, y: -.0225878656}
+      - {x: -.166601181, y: -.110613853}
+      - {x: -.0224113464, y: -.228201717}
+      - {x: .0462055206, y: -.231600851}
+      - {x: .166601181, y: -.0134207904}
+      - {x: .166601181, y: .157214731}
+      - {x: .00743103027, y: .238399118}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
